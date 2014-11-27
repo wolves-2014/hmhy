@@ -1,0 +1,39 @@
+  [1m[36m (33.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFeelings (20141127024440)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (35.1ms)[0m  [1mCREATE TABLE "feelings" ("id" serial primary key, "word" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (15.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024440"]]
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateIndications (20141127024454)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "indications" ("id" serial primary key, "feeling_id" integer, "assessment_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024454"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAssessments (20141127024501)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "assessments" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024501"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCompetencies (20141127024508)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "competencies" ("id" serial primary key, "assessment_id" integer, "provider_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024508"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProviders (20141127024514)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "providers" ("id" serial primary key, "title" character varying(255), "name" character varying(255), "photo_url" character varying(255), "profile_url" character varying(255), "email" character varying(255), "phone_number" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024514"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLocations (20141127024518)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "locations" ("id" serial primary key, "zip_code" integer, "lat" float, "lng" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127024518"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResidences (20141127164044)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "residences" ("id" serial primary key, "provider_id" integer, "location_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141127164044"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
