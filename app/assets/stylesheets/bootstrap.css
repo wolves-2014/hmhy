@@ -65,6 +65,7 @@ dfn {
   font-style: italic;
 }
 h1 {
+  color: #fffef1;
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -1409,6 +1410,7 @@ pre code {
   }
 }
 .container-fluid {
+  background-color: #0c273d;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
