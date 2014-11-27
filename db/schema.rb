@@ -17,46 +17,31 @@ ActiveRecord::Schema.define(version: 20141127164044) do
   enable_extension "plpgsql"
 
   create_table "assessments", force: true do |t|
-    t.string   "word"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "competencies", force: true do |t|
-    t.integer  "assessment_id"
-    t.integer  "provider_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "feelings", force: true do |t|
-    t.string   "word"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "indications", force: true do |t|
-    t.integer  "feeling_id"
-    t.integer  "assessment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "locations", force: true do |t|
-    t.integer  "zip_code"
-    t.float    "lat"
-    t.float    "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "providers", force: true do |t|
-    t.string   "title"
-    t.string   "name"
-    t.string   "photo_url"
-    t.string   "profile_url"
-    t.string   "email"
-    t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

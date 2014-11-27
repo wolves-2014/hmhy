@@ -1,83 +1,109 @@
 
-<div class="container">
+<div class="container-fluid" id="input-container">
    <div class="row">
+    <div class="col-sm-3">
+      <h1>Spring</h1>
+    </div>
    </div>
 
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-4">
     </div>
-    <div class="col-md-4">
-      <h2>Today I feel...</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-2">
-      <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-4">
+      <h3>Today I feel...</h3>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-sm-4">
     </div>
-    <div class="col-md-2">
-      <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+      <h3><a href="#" class="btn btn-default">Tired</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Anxious</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Alone</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-2">
-      <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
-    </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Unmotivated</a></h3>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-sm-4">
     </div>
-    <div class="col-md-2">
-      <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+      <h3><a href="#" class="btn btn-default">Bitter</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Disgusted</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Lost</a></h3>
     </div>
-    <div class="col-md-2">
-       <h3><a href="#" class="btn btn-default">Feelings</a></h3>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Empty</a></h3>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-1">
+      <h3><a href="#" class="btn btn-default">Uncertain</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Anger</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Powerless</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Invisible</a></h3>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-1">
+      <h3><a href="#" class="btn btn-default">Resentful</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Disillusioned</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Distrustful</a></h3>
+    </div>
+    <div class="col-sm-1">
+       <h3><a href="#" class="btn btn-default">Afraid</a></h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5">
+    </div>
+    <div class="col-sm-3">
+      <%= form_for :location, url: "#" do |f| %>
+        <p><%= f.text_field :location, :placeholder => "zip" %><%= f.submit "Search" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="results-container">
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+      <h3>Results</h3>
+    </div>
+  </div>
 </div>
