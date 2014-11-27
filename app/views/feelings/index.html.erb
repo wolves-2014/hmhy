@@ -91,10 +91,14 @@
     <div class="col-sm-5">
     </div>
     <div class="col-sm-3">
-      <%= form_for :location, url: "#" do |f| %>
+      <%= form_for :location, url: "#", html: {id: "search"} do |f| %>
         <p><%= f.text_field :location, :placeholder => "zip" %><%= f.submit "Search" %></p>
       <% end %>
     </div>
+  </div>
+  <div class="row">
+    <div id="demo">
+    <div>
   </div>
 </div>
 
@@ -106,4 +110,5 @@
       <h3>Results</h3>
     </div>
   </div>
+
 </div>
