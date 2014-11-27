@@ -111,4 +111,8 @@
     </div>
   </div>
 
+  <% Providers.all.each do |provider| %>
+    <%= render partial: "providers/result", layout: false, locals: {provider: provider} %>
+  <% end %>
+
 </div>
