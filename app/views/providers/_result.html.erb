@@ -1,6 +1,21 @@
 <div class="row">
-  <div class="col-sm-12">
-    <img serc=""/>
-    <h3>provider.name</h3>
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-2">
+    <img src=<%= provider.photo_url %>/>
+  </div>
+  <div class="col-small-4">
+    <h3><%= provider.name %></h3>
+    <p><%= provider.phone_number %></p>
+    <p><%= provider.email %></p>
   </div>
 </div>
+
+
+
+<!-- title: Faker::Name.title,
+  name: Faker::Name.name,
+  photo_url: "http://lorempixel.com/150/200/cats/#{rand(1..10)}",
+  profile_url: Faker::Internet.url,
+  email: Faker::Internet.email,
+  phone_number: Faker::PhoneNumber.phone_number) -->
