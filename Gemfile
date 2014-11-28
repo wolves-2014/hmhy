@@ -33,7 +33,12 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'brice'
+  gem 'shoulda'
+  gem 'shoulda-matchers', require: false
+  gem 'factory_girl'
 end
+
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
