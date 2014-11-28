@@ -7,7 +7,7 @@ class ProvidersController < ApplicationController
     @providers = Provider.match(assessments)
     respond_to do |format|
       format.json {
-        render json: {html: render_to_string(:partial => "results.html.erb", :locals => {:providers => @providers}) }
+        render json: {html: render_to_string(:template => "providers/index.html.erb", :locals => {:providers => @providers}) }
       }
     end
   end

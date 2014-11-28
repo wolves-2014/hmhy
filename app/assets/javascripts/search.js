@@ -9,7 +9,6 @@ $(document).ready (function(){
   });
 
   request.done(function(response){
-    console.log(response);
     $("#results-container").replaceWith(response.html);
   });
 
