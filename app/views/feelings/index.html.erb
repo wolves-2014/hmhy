@@ -51,12 +51,9 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4">
-      <h3>These people may be able to help...</h3>
+      <h3>Click on some words above to help us help you...</h3>
     </div>
   </div>
 
-  <% Provider.all.each do |provider| %>
-    <%= render partial: "providers/result", layout: false, locals: {provider: provider} %>
-  <% end %>
 
 </div>
