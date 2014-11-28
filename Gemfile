@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'faker'
+  gem 'brice'
 end
 
 # Use ActiveModel has_secure_password
