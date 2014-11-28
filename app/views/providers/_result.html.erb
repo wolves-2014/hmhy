@@ -1,21 +1,23 @@
 <div class="row">
   <div class="col-sm-3">
   </div>
-  <div class="col-sm-2">
-    <img src=<%= provider.photo_url %>/>
-  </div>
-  <div class="col-small-4">
-    <h3><%= provider.name %></h3>
-    <p><%= provider.phone_number %></p>
-    <p><%= provider.email %></p>
+  <div class="col-sm-6" id="result-partial-container">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src=<%= provider.photo_url %> class="img-rounded"/>
+      </div>
+      <div class="col-sm-6">
+        <h3><%= provider.name %></h3>
+        <p><%= provider.email %></p>
+        <% provider.assessments.each do |a| %>
+          <span><%= a.word %></span>
+        <% end %>
+      </div>
+      <div class="col-sm-3">
+        <p><%= provider.phone_number %></p>
+      </div>
+    </div>
   </div>
 </div>
 
 
-
-<!-- title: Faker::Name.title,
-  name: Faker::Name.name,
-  photo_url: "http://lorempixel.com/150/200/cats/#{rand(1..10)}",
-  profile_url: Faker::Internet.url,
-  email: Faker::Internet.email,
-  phone_number: Faker::PhoneNumber.phone_number) -->

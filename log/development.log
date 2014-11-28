@@ -8131,3 +8131,2243 @@ Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:37:20
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:37:20 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:42:43 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mProvider Load (0.4ms)[0m  [1mSELECT "providers".* FROM "providers"[0m
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered feelings/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 204ms (Views: 201.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:42:44 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+Processing by FeelingsController#index as HTML
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.3ms)
+  Rendered providers/_result.html.erb (0.2ms)
+  Rendered providers/_result.html.erb (0.2ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered feelings/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 205ms (Views: 203.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:40 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.5ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered feelings/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 203ms (Views: 199.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:51 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:52 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:52 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:52 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:52 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 18:43:52 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.3ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.3ms)[0m  SELECT "providers".* FROM "providers"
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered providers/_result.html.erb (0.1ms)
+  Rendered feelings/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 197ms (Views: 195.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:44:02 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 18:53:36 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.3ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.7ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (88.0ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.6ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.8ms)
+  Rendered feelings/index.html.erb within layouts/application (137.8ms)
+Completed 200 OK in 347ms (Views: 336.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 18:53:37 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (2.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.9ms)
+  Rendered feelings/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 221ms (Views: 214.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:03:30 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.3ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.5ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.8ms)
+  Rendered feelings/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 221ms (Views: 214.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:01 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:05:02 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:06:56 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.5ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (4.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.3ms)
+  Rendered feelings/index.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 1290ms (Views: 1282.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:06:57 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:07:16 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.5ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.2ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (2.5ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (2.5ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (36.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.4ms)
+  Rendered feelings/index.html.erb within layouts/application (99.2ms)
+Completed 200 OK in 1317ms (Views: 1308.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:17 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:07:18 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:08:12 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.3ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.3ms)
+  Rendered feelings/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 1258ms (Views: 1250.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:13 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:08:23 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.5ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.5ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.9ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (2.7ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (2.2ms)
+  Rendered feelings/index.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 1393ms (Views: 1384.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:08:25 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:09:03 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.5ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.4ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.5ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (2.7ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.8ms)
+  Rendered feelings/index.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 1286ms (Views: 1276.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:04 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:09:18 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.5ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.5ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (2.3ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (2.5ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (1.7ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (3.9ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (2.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.5ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (3.2ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[35mAssessment Load (0.6ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (3.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (53.5ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (2.1ms)
+  Rendered feelings/index.html.erb within layouts/application (125.3ms)
+Completed 200 OK in 1359ms (Views: 1348.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:20 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:09:29 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.5ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.6ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[35mAssessment Load (0.4ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (2.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.5ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (2.3ms)
+  Rendered feelings/index.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 1293ms (Views: 1283.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:09:31 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:12:31 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.6ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.3ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (3.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.5ms)
+  Rendered feelings/index.html.erb within layouts/application (82.4ms)
+Completed 200 OK in 244ms (Views: 236.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:31 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:12:32 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.4ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.3ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (36.4ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.1ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.5ms)
+  Rendered feelings/index.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 241ms (Views: 233.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:21 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:14:22 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.5ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.3ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (2.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.7ms)
+  [1m[36mAssessment Load (0.4ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (2.0ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.2ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.3ms)
+  Rendered feelings/index.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 229ms (Views: 222.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:04 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+Processing by FeelingsController#index as HTML
+  [1m[36mFeeling Load (0.3ms)[0m  [1mSELECT "feelings".* FROM "feelings"[0m
+  [1m[35mProvider Load (0.4ms)[0m  SELECT "providers".* FROM "providers"
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 1]]
+  Rendered providers/_result.html.erb (2.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 2]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 3]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 4]]
+  Rendered providers/_result.html.erb (1.9ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 5]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 6]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 7]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 8]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 9]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 10]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 11]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 12]]
+  Rendered providers/_result.html.erb (1.5ms)
+  [1m[36mAssessment Load (0.3ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 13]]
+  Rendered providers/_result.html.erb (1.8ms)
+  [1m[35mAssessment Load (0.3ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 14]]
+  Rendered providers/_result.html.erb (33.9ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 15]]
+  Rendered providers/_result.html.erb (1.6ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 16]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 17]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 18]]
+  Rendered providers/_result.html.erb (1.3ms)
+  [1m[36mAssessment Load (0.2ms)[0m  [1mSELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1[0m  [["provider_id", 19]]
+  Rendered providers/_result.html.erb (1.4ms)
+  [1m[35mAssessment Load (0.2ms)[0m  SELECT "assessments".* FROM "assessments" INNER JOIN "competencies" ON "assessments"."id" = "competencies"."assessment_id" WHERE "competencies"."provider_id" = $1  [["provider_id", 20]]
+  Rendered providers/_result.html.erb (1.5ms)
+  Rendered feelings/index.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 232ms (Views: 225.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+
+
+Started GET "/assets/feelings.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:35 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/feelings.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/geolocation.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 19:15:36 -0600
