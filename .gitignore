@@ -1,5 +1,6 @@
 .bundle
 tmp/*
+log/*
 .DS_Store
 db/schema.rb
 .fuse*
