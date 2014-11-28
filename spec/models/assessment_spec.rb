@@ -14,11 +14,11 @@ describe Assessment do
       @sad = Feeling.create!(word: "sad")
       @feels = [@sad]
       @vg_add = @happy.assessments.create!(word: "VG_addiction")
-      @blame_parents = @sad.assessments.create!(word: "blame your parents")
+      @depression = @sad.assessments.create!(word: "depression")
     end
 
-    it "should return blame_parents for sad" do
-      expect(Assessment.determine_prevalent(@feels).first).to be(@blame_parents)
+    it "should return depression for sad" do
+      expect(Assessment.determine_prevalent(@feels).first).to be(@depression)
     end
 
     it "should return VG_addiction for happy and sad" do
