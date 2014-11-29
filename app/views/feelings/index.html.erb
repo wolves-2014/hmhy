@@ -14,17 +14,13 @@
     </div>
   </div>
 
-  <% 4.times do %>
     <div class="row">
-      <div class="col-sm-4">
+      <div id="word-cloud">
+        <% @primary_feelings.each do |f| %>
+            <div class="floating-word"><a href="#" ><%= f.word %></a></div>
+        <% end %>
       </div>
-      <% 4.times do %>
-        <div class="col-sm-1">
-          <h3><a href="#" class="btn btn-default"><%= @feelings.sample.word %></a></h3>
-        </div>
-      <% end %>
     </div>
-  <% end %>
 
   <div class="row">
     <div class="col-sm-4">
