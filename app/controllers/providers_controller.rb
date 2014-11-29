@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
   def index
-    feelings = []
-    feelings << Feeling.find_by(word: params[:feeling])
+    feelings = params[:feelings].map{|word| Feeling.find_by(word: feeling)}
+    locations = Location.near(params[:location], params[:distance])
     # feelings.map {|id| Feeling.find(id)}
     assessments = Assessment.determine_prevalent(feelings)
     @providers = Provider.match(assessments)

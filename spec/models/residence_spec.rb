@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Residence do
   before do
-    @location = Location.create!(zip_code: 90210, lat: 9, lng: 8)
+    @location = Location.create!(zip_code: 90210, latitude: 9, longitude: 8)
     @joe = Provider.create!(name: "Joe Johnson", profile_url: Faker::Internet.url, phone_number: Faker::PhoneNumber.phone_number)
     @residence = Residence.create!(location: @location, provider: @joe)
   end

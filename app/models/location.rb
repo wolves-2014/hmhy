@@ -12,4 +12,8 @@ class Location < ActiveRecord::Base
   after_validation :reverse_geocode
 
   acts_as_copy_target
+
+  def address=(zip)
+    # revisit this if we want to create locations
+  end
 end
