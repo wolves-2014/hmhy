@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 20141127164044) do
   end
 
   create_table "locations", force: true do |t|
-    t.integer  "zip_code"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "zip_code"
+    t.float   "latitude"
+    t.float   "longitude"
   end
+
+  add_index "locations", ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude", using: :btree
 
   create_table "providers", force: true do |t|
     t.string   "title"
