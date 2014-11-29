@@ -44,11 +44,9 @@ ActiveRecord::Schema.define(version: 20141128232002) do
   end
 
   create_table "locations", force: true do |t|
-    t.integer  "zip_code"
-    t.decimal  "lat",        precision: 9, scale: 6
-    t.decimal  "lng",        precision: 9, scale: 6
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "zip_code"
+    t.decimal "lat",      precision: 9, scale: 6
+    t.decimal "lng",      precision: 9, scale: 6
   end
 
   create_table "providers", force: true do |t|

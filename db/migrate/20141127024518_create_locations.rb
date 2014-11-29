@@ -4,8 +4,6 @@ class CreateLocations < ActiveRecord::Migration
       t.integer :zip_code
       t.decimal :lat, precision: 9, scale: 6
       t.decimal :lng, precision: 9, scale: 6
-
-      t.timestamps
     end
   end
 end
