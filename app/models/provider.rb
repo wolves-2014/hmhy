@@ -7,8 +7,12 @@ class Provider < ActiveRecord::Base
   validates :name, :profile_url, :phone_number, presence: true
   validates :profile_url, uniqueness: true
 
-  def self.match(assessments)
-    providers = assessments.map{|assessment| assessment.providers.to_a}
-    providers.flatten.uniq
+  def self.match(assessments, locations)
+    # binding.pry
+    providers_by_location = locations.map{|location| location.providers.to_a}
+    providers_by_assessment = assessments.map{|assessment| assessment.providers.to_a}
+    providers_by_assessment.flatten.uniq & providers_by_location.flatten.uniq
   end
+
+
 end

@@ -105,19 +105,23 @@ assessments[5].indications.create!(
 
 providers = []
 
-20.times do
-  providers << Provider.create!(
-  title: Faker::Name.title,
-  name: Faker::Name.name,
-  photo_url: "http://lorempixel.com/150/200/cats/#{rand(1..10)}",
-  profile_url: Faker::Internet.url,
-  email: Faker::Internet.email,
-  phone_number: Faker::PhoneNumber.phone_number)
+Location.copy_from 'db/us_postal_codes.csv'
+
+locations = Location.near(60606.to_s, 3).to_a
+
+locations.each do |location|
+  location.providers.create!(
+    title: Faker::Name.title,
+    name: Faker::Name.name,
+    photo_url: "http://lorempixel.com/150/200/cats/#{rand(1..10)}",
+    profile_url: Faker::Internet.url,
+    email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number)
 end
 
-providers.each do |provider|
+Provider.all.each do |provider|
   assessments = []
-  2-5.times do
+  rand(2..5).times do
     assessments << Assessment.all.sample
   end
   assessments.uniq!
@@ -126,7 +130,6 @@ providers.each do |provider|
   end
 end
 
-Location.copy_from 'db/us_postal_codes.csv'
 
 
 
