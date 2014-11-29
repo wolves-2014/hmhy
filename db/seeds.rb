@@ -127,7 +127,7 @@ providers.each do |provider|
   end
 end
 
-
+Location.copy_from 'db/cityzip.csv'
 
 
 
