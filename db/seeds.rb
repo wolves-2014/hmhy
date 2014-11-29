@@ -27,7 +27,6 @@ end
 assessments = ["depression", "addiction", "ADD", "eating disorder", "grief", "anxiety"]
 
 assessments.map!{|assessment| Assessment.create!(word: assessment)}
-binding.pry
 
 assessments[0].indications.create!(
   [{feeling: primary_feeling_objects[0]},
@@ -127,7 +126,7 @@ providers.each do |provider|
   end
 end
 
-Location.copy_from 'db/cityzip.csv'
+Location.copy_from 'db/us_postal_codes.csv'
 
 
 

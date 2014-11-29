@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128232002) do
+ActiveRecord::Schema.define(version: 20141127164044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
 
   create_table "assessments", force: true do |t|
     t.string   "word"
@@ -45,9 +44,11 @@ ActiveRecord::Schema.define(version: 20141128232002) do
 
   create_table "locations", force: true do |t|
     t.integer "zip_code"
-    t.decimal "lat",      precision: 9, scale: 6
-    t.decimal "lng",      precision: 9, scale: 6
+    t.float   "latitude"
+    t.float   "longitude"
   end
+
+  add_index "locations", ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude", using: :btree
 
   create_table "providers", force: true do |t|
     t.string   "title"
@@ -65,13 +66,6 @@ ActiveRecord::Schema.define(version: 20141128232002) do
     t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "spatial_ref_sys", primary_key: "srid", force: true do |t|
-    t.string  "auth_name", limit: 256
-    t.integer "auth_srid"
-    t.string  "srtext",    limit: 2048
-    t.string  "proj4text", limit: 2048
   end
 
 end
