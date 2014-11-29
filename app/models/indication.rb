@@ -11,7 +11,8 @@ class Indication < ActiveRecord::Base
     indications.each do |indication|
       correlations[indication.assessment] ? correlations[indication.assessment] += indication.ranking : correlations[indication.assessment] = indication.ranking
     end
+
     # return assessment with highest correlation value in an array
-    [correlations.sort_by{|assessment, correlation| correlation}.last.first]
+    [correlations.sort_by{|assessment, correlation| correlation}.last.first].flatten
   end
 end
