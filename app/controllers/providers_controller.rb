@@ -5,12 +5,15 @@ class ProvidersController < ApplicationController
     # locations = Location.near(params[:location], params[:distance])
     locations = Location.near(60606.to_s, 1)
     assessments = Assessment.determine_prevalent(feelings)
-    @feelings = Feeling.next_step(feelings.first.ranking + 1, assessments) if feelings.all?{|feel| feel.ranking < 3}
+    @secondary_feelings = Feeling.select(2, assessments) unless feelings.any?{|feel| feel.ranking >= 2}
+    @tertiary_feelings = Feeling.select(3, assessments) unless feelings.all?{|feel| feel.ranking == 1}
+    # binding.pry
     @providers = Provider.match(assessments, locations)
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", locals: {providers: @providers}, layout: false),
-          feelings_html: render_to_string("feelings/secondary_index", locals: {feelings: @feelings}, layout: false)}
+          secondary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @secondary_feelings}, layout: false),
+          tertiary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @tertiary_feelings}, layout: false)}
       }
     end
   end
