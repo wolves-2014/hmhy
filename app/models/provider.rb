@@ -11,7 +11,8 @@ class Provider < ActiveRecord::Base
     # binding.pry
     providers_by_location = locations.map{|location| location.providers.to_a}
     providers_by_assessment = assessments.map{|assessment| assessment.providers.to_a}
-    providers_by_assessment.flatten.uniq & providers_by_location.flatten.uniq
+    providers = providers_by_assessment.flatten.uniq & providers_by_location.flatten.uniq
+    providers[0..4] #must be changed
   end
 
 

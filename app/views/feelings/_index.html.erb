@@ -1,0 +1,7 @@
+<% if @feelings %>
+  <div id="word-cloud">
+    <% @feelings.each do |feeling| %>
+        <button type="button" class="btn btn-info feeling-word"><%= feeling.word %></button>
+    <% end %>
+  </div>
+<% end %>
