@@ -1,10 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# #
+# # Examples:
+# #
+# #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+# #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
 
 primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "overwhelmed", "afraid"]
 secondary_feelings = ["like I sleep too much", "like I don't sleep enough", "like I have no appetite", "like I avoid difficult tasks",
@@ -24,7 +25,7 @@ tertiary_feeling_objects = tertiary_feelings.map! do | feeling |
   Feeling.create!(word: feeling, ranking: 3)
 end
 
-assessments = ["depression", "addiction", "ADD", "eating disorder", "grief", "anxiety"]
+assessments = ["depression", "addiction", "adhd", "eating disorders", "grief", "anxiety"]
 
 assessments.map!{|assessment| Assessment.create!(word: assessment)}
 
@@ -103,32 +104,37 @@ assessments[5].indications.create!(
   {feeling: tertiary_feeling_objects[18]}]
   )
 
-providers = []
-
 Location.copy_from 'db/us_postal_codes.csv'
 
-locations = Location.near(60606.to_s, 3).to_a
+locations = Location.near(60606.to_s, 50).to_a
 
-locations.each do |location|
-  location.providers.create!(
-    title: Faker::Name.title,
-    name: Faker::Name.name,
-    photo_url: "http://lorempixel.com/100/100/cats/#{rand(1..10)}",
-    profile_url: Faker::Internet.url,
-    email: Faker::Internet.email,
-    phone_number: Faker::PhoneNumber.phone_number)
+@filename = "db/therapists_for_test.csv"
+CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
+  new_provider = Provider.create!(
+    title: line[1],
+    name: line[2],
+    photo_url: line[3],
+    profile_url: line[4],
+    email: "no@email.com",
+    phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end))
+
+  Residence.create!(provider: new_provider, location: locations.sample)
+
+  valid_competencies = []
+  all_competencies = JSON.parse line[7]
+  all_competencies.each do |competency|
+    if matched_competency = competency[/Depression|Anxiety|Grief|ADHD|Eating Disorders|Addiction/]
+      valid_competencies << matched_competency.downcase
+    end
+  end
+  unless valid_competencies == []
+    valid_competencies.uniq.each do |competency|
+      Competency.create!(assessment: Assessment.find_by(word: competency), provider: new_provider)
+    end
+  end
+  puts "Creating entry for Psychology Today user: #{line[0]}"
 end
 
-Provider.all.each do |provider|
-  assessments = []
-  rand(2..5).times do
-    assessments << Assessment.all.sample
-  end
-  assessments.uniq!
-  assessments.each do |assessment|
-    provider.competencies.create!(assessment: assessment)
-  end
-end
 
 
 
