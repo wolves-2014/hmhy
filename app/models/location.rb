@@ -8,12 +8,15 @@ class Location < ActiveRecord::Base
   geocoded_by :zip_code
   after_validation :geocode
 
-  reverse_geocoded_by :latitude, :longitude
+  reverse_geocoded_by :latitude, :longitude do |obj,results|
+    # binding.pry
+    # obj.update(zip_code: geo.postal_code.to_i) if geo = results.first
+  end
   after_validation :reverse_geocode
 
   acts_as_copy_target
 
-  def address=(zip)
-    # revisit this if we want to create locations
-  end
+  # def address=(zip)
+  #   # revisit this if we want to create locations
+  # end
 end
