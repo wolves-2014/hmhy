@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'feelings#index'
 
-  resources :feelings, only: [:index]
-  resources :providers, only: [:index]
+  resources :feelings, only: [:index, :show]
+  resources :providers
   # resources :locations, only: []
   # resources :assessments
   # The priority is based upon order of creation: first created -> highest priority.
