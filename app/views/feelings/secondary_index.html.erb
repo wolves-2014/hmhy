@@ -1,0 +1,9 @@
+<div class="container-fluid" id="secondary-feelings">
+  <% if feelings %>
+    <div id="word-cloud">
+      <% feelings.each do |feeling| %>
+          <div class="floating-word"><a href="#" ><%= feeling.word %></a></div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
