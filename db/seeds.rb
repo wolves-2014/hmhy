@@ -11,7 +11,7 @@ primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "ove
 
 secondary_feelings = ["sleeping too much", "not sleeping enough", "no appetite", "avoiding complicated tasks",
                       "guilty", "restless", "strained relationships"]
-tertiary_feelings =["hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
+tertiary_feelings =["feeling hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
                     "often losing things", "making careless mistakes", "losing control when eating", "disliking own body",
                      "thinking about weight too much", "exercising too much", "dieting too much", "lost someone important",
                      "like I'm a slave to something", "wasting time on chasing something"]
@@ -109,7 +109,7 @@ assessments[5].indications.create!(
 
 Location.copy_from 'db/us_postal_codes.csv'
 
-locations = Location.near(60606.to_s, 50).to_a
+locations = Location.near(60606.to_s, 500).to_a
 
 @filename = "db/therapists_for_test.csv"
 counter = 0

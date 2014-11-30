@@ -1,7 +1,7 @@
 <% if @feelings %>
-  <div id="word-cloud">
+  <div class="word-container" id="<%= @feelings.first.ranking %>">
     <% @feelings.each do |feeling| %>
-        <button type="button" class="btn btn-info feeling-word"><%= feeling.word %></button>
+      <button type="button" class="btn btn-info feeling-word"><%= feeling.word %></button>
     <% end %>
   </div>
 <% end %>
