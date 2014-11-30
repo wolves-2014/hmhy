@@ -17,6 +17,7 @@ $(document).ready (function(){
     request.done(function(response){
       $("#results-container").replaceWith(response.providers_html);
       $("#word-cloud").replaceWith(response.secondary_feelings_html);
+      debugger;
       // $("#tertiary-feelings").html(response.tertiary_feelings_html);
     });
 
