@@ -1,7 +1,7 @@
   <% if feelings %>
     <div id="word-cloud">
       <% feelings.each do |feeling| %>
-          <div class="floating-word"><a href="#" ><%= feeling.word %></a></div>
+          <button type="button" class="btn btn-info feeling-word"><%= feeling.word %></button>
       <% end %>
     </div>
   <% end %>
