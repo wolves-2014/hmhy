@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: hmhy_production
-  username: hmhy
   password: <%= ENV['HMHY_DATABASE_PASSWORD'] %>
