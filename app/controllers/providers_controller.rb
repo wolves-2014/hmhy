@@ -5,8 +5,10 @@ class ProvidersController < ApplicationController
     # locations = Location.near(params[:location], params[:distance])
     locations = Location.near(60606.to_s, 1)
     assessments = Assessment.determine_prevalent(feelings)
-    @secondary_feelings = Feeling.select(2, assessments) unless feelings.any?{|feel| feel.ranking >= 2}
-    @tertiary_feelings = Feeling.select(3, assessments) unless feelings.all?{|feel| feel.ranking == 1}
+    # @secondary_feelings = Feeling.select(2, assessments) #unless feelings.any?{|feel| feel.ranking >= 2}
+    # @tertiary_feelings = Feeling.select(3, assessments) #unless feelings.all?{|feel| feel.ranking == 1}
+    @secondary_feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq
+    @tertiary_feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq
     # binding.pry
     @providers = Provider.match(assessments, locations)
     respond_to do |format|
