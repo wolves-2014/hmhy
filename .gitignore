@@ -4,3 +4,4 @@ log/*
 .DS_Store
 db/schema.rb
 .fuse*
+.env
