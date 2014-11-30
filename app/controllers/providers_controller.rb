@@ -13,7 +13,7 @@ class ProvidersController < ApplicationController
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", layout: false),
-          secondary_feelings_html: render_to_string("feelings/_index.html.erb", layout: false)
+          feelings_html: render_to_string("feelings/_index.html.erb", layout: false)
           # tertiary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @tertiary_feelings}, layout: false)
         }
       }
