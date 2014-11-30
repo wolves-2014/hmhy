@@ -38,6 +38,8 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
   gem 'factory_girl'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'rails_12factor', group: :production
