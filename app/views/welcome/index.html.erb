@@ -34,17 +34,8 @@
   </div>
 
     <div class="row">
-      <div id="word-cloud">
-        <% @primary_feelings.each do |feeling| %>
-          <button type="button" class="btn btn-info feeling-word"><%= feeling.word %></button>
-        <% end %>
-      </div>
+      <%= render "feelings/index.html.erb", locals: {feelings: @feelings}, layout: false %>
     </div>
-
-<!--   <div class="row">
-    <div class="col-sm-4">
-    </div>
-  </div> -->
 
   <div class="row">
     <div class="col-sm-5">
@@ -55,14 +46,7 @@
       <% end %>
     </div>
   </div>
-<!--   <div class="row">
-    <div id="demo">
-    <div>
-  </div> -->
-<div class="container-fluid" id="secondary-feelings">
-</div>
-<div class="container-fluid" id="tertiary-feelings">
-</div>
+
 </div>
 
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'feelings#index'
+  get 'welcome/index'
+  root 'welcome#index'
 
   resources :feelings, only: [:index, :show]
   resources :providers

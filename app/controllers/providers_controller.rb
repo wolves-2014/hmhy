@@ -1,6 +1,5 @@
 class ProvidersController < ApplicationController
   def index
-    # binding.pry
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
     # locations = Location.near(params[:location], params[:distance])
     locations = Location.near(60606.to_s, 1)
@@ -11,11 +10,13 @@ class ProvidersController < ApplicationController
     @tertiary_feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq
     # binding.pry
     @providers = Provider.match(assessments, locations)
+    # session will keep selected feelings
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", locals: {providers: @providers}, layout: false),
           secondary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @secondary_feelings}, layout: false),
-          tertiary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @tertiary_feelings}, layout: false)}
+          # tertiary_feelings_html: render_to_string("feelings/additional_feelings", locals: {feelings: @tertiary_feelings}, layout: false)
+        }
       }
     end
   end

@@ -16,8 +16,8 @@ $(document).ready (function(){
 
     request.done(function(response){
       $("#results-container").replaceWith(response.providers_html);
-      $("#secondary-feelings").html(response.secondary_feelings_html);
-      $("#tertiary-feelings").html(response.tertiary_feelings_html);
+      $("#word-cloud").replaceWith(response.secondary_feelings_html);
+      // $("#tertiary-feelings").html(response.tertiary_feelings_html);
     });
 
     request.fail(function(response){
