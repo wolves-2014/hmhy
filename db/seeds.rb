@@ -8,20 +8,22 @@
 require 'csv'
 
 primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "overwhelmed", "afraid"]
-secondary_feelings = ["like I sleep too much", "like I don't sleep enough", "like I have no appetite", "like I avoid difficult tasks",
-                      "guilty", "restless", "like my relationships are strained"]
-tertiary_feelings =["hopeless", "indecisive", "obsessed with death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
-                    "like I always lose things", "like I make careless mistakes", "like I lose control when eating", "like I don't like my body", "like I think about my weight too much", "like I exercise too much", "like I diet too often", "like I lost someone important", "like I'm a slave to something", "like I've wasted too much of my time chasing something"]
+secondary_feelings = ["sleeping too much", "not sleeping enough", "no appetite", "avoiding complicated tasks",
+                      "guilty", "restless", "strained relationships"]
+tertiary_feelings =["hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
+                    "often losing things", "making careless mistakes", "losing control when eating", "disliking own body",
+                     "thinking about weight too much", "exercising too much", "dieting too much", "lost someone important",
+                     "like I'm a slave to something", "wasting time on chasing something"]
 
-primary_feeling_objects = primary_feelings.map! do | feeling |
+primary_feeling_objects = primary_feelings.map do | feeling |
   Feeling.create!(word: feeling, ranking: 1)
 end
 
-secondary_feeling_objects = secondary_feelings.map! do | feeling |
+secondary_feeling_objects = secondary_feelings.map do | feeling |
   Feeling.create!(word: feeling, ranking: 2)
 end
 
-tertiary_feeling_objects = tertiary_feelings.map! do | feeling |
+tertiary_feeling_objects = tertiary_feelings.map do | feeling |
   Feeling.create!(word: feeling, ranking: 3)
 end
 
@@ -56,9 +58,8 @@ assessments[1].indications.create!(
   {feeling: secondary_feeling_objects[1]},
   {feeling: secondary_feeling_objects[4]},
   {feeling: secondary_feeling_objects[6]},
-  {feeling: tertiary_feeling_objects[4]},
-  {feeling: tertiary_feeling_objects[5]},
-  {feeling: tertiary_feeling_objects[6]}]
+  {feeling: tertiary_feeling_objects[17]},
+  {feeling: tertiary_feeling_objects[18]}]
   )
 
 assessments[2].indications.create!(
@@ -100,8 +101,9 @@ assessments[5].indications.create!(
   {feeling: primary_feeling_objects[6]},
   {feeling: secondary_feeling_objects[1]},
   {feeling: secondary_feeling_objects[5]},
-  {feeling: tertiary_feeling_objects[17]},
-  {feeling: tertiary_feeling_objects[18]}]
+  {feeling: tertiary_feeling_objects[4]},
+  {feeling: tertiary_feeling_objects[5]},
+  {feeling: tertiary_feeling_objects[6]}]
   )
 
 Location.copy_from 'db/us_postal_codes.csv'
@@ -109,6 +111,7 @@ Location.copy_from 'db/us_postal_codes.csv'
 locations = Location.near(60606.to_s, 50).to_a
 
 @filename = "db/therapists_for_test.csv"
+counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
   new_provider = Provider.create!(
     title: line[1],
@@ -132,7 +135,8 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
       Competency.create!(assessment: Assessment.find_by(word: competency), provider: new_provider)
     end
   end
-  puts "Creating entry for Psychology Today user: #{line[0]}"
+  counter += 1
+  puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 1000 == 0
 end
 
 

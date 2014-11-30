@@ -7,4 +7,6 @@ class Feeling < ActiveRecord::Base
   def self.select(rank, assessments)
     assessments.map{|assessment| assessment.feelings.find_by(ranking: rank)}.uniq
   end
+
+
 end

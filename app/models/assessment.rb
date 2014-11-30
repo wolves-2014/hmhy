@@ -8,16 +8,13 @@ class Assessment < ActiveRecord::Base
 
   def self.determine_prevalent(feelings)
     correlations = {}
-
     feelings.each do |feeling|
       feeling.assessments.each do |assessment|
-
         if correlations[assessment]
           correlations[assessment] += feeling.ranking
         else
           correlations[assessment] = feeling.ranking
         end
-
       end
     end
     sort_assessments(correlations)
@@ -25,7 +22,15 @@ class Assessment < ActiveRecord::Base
 
   def self.sort_assessments(correlations)
     highest_value = correlations.sort_by{|correlations, rank| rank}.last.last
-    correlations.select{|correlations, rank| rank == highest_value}.keys
+    correlations.select{|correlations, rank| rank >= highest_value - 1}.keys
+  end
+
+  def secondary_feelings
+    self.feelings.where(ranking: 2)
+  end
+
+  def tertiary_feelings
+    self.feelings.where(ranking: 3)
   end
 end
 
