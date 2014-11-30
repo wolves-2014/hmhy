@@ -15,7 +15,7 @@ def process_page(url)
   phone = process_phone(doc)
   zip = process_zip(doc)
   if zip != nil
-    CSV.open("therapists.csv", "a") do |csv|
+    CSV.open("50000_to_100000_therapists.csv", "a") do |csv|
       csv << [@id,title, name, prof_image_url, profile_url, phone, zip, specialities]
     end
   end
@@ -54,11 +54,11 @@ def process_specialities(doc)
   return specs
 end
 
-@id = 175067
+@id = 50000
 url = "http://therapists.psychologytoday.com/rms/prof_detail.php?profid=#{@id}"
 process_page(url)
 
-while @id < 220000
+while @id < 100000
   seconds = 0.3
   puts "Sleeping for #{seconds} seconds..."
   sleep(seconds)
