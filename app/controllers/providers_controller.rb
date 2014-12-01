@@ -24,15 +24,18 @@ class ProvidersController < ApplicationController
   end
 
   def create
-    competencies = params[:provider][:competency]
-    selected_competencies = competencies[0].select {|k,v| v.to_i == 1}.keys
+    competencies_array = []
+    competencies_hash = params[:competency][0]
+    competencies_hash.each_key { |key| competencies_array << key }
     location = params[:provider][:zip_code].to_i
     @provider = Provider.new(provider_params)
+    binding.pry
     if @provider.save
-      selected_competencies.each do |competency|
-        Competency.create!(provider: @provider, assessment: Assessment.find_by(word: competency.to_s))
+      competencies_array.each do |competency|
+        Competency.create!(provider: @provider, assessment: Assessment.find_by(word: competency))
       end
       Residence.create!(provider: @provider, location: Location.find_by(zip_code: location))
+      binding.pry
       redirect_to root_path
     else
       render "new"

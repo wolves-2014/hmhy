@@ -17,9 +17,7 @@
 
 <div class="container" id="provider-signup-container">
   <div class="row">
-    <div class="col-sm-offset-4">
       <h2>Create Profile<h2>
-    </div>
   </div>
   <div class="row">
     <div class="col-sm-1">
@@ -55,43 +53,40 @@
           <%= f.label :profile_url, "Profile URL:" %>
           <%= f.text_field :profile_url, class: 'form-control' %>
         </div>
-        <div class="checkbox">
-         <%= f.label "Depression" %>
-         <%= f.check_box "competency[][depression]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Anxiety" %>
-         <%= f.check_box "competency[][anxiety]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "ADD/ADHD" %>
-         <%= f.check_box "competency[][adhd]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Eating Disorders" %>
-         <%= f.check_box "competency[][eating_disorders]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Addiction" %>
-         <%= f.check_box "competency[][addiction]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Grief" %>
-         <%= f.check_box "competency[][grief]", class: 'checkbox' %>
-        </div>
-        <%= f.submit 'Submit', class: 'btn btn-primary' %>
-      <% end %>
-
       </div>
-
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-4">
+        <h4>Areas of Specialty</h4>
+        <div class="checkbox">
+          <label><input name="competency[][depression]" type="checkbox" value="">Depression</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][anxiety]" type="checkbox" value="">Anxiety</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][adhd]" type="checkbox" value="">Add/ADHD</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][eating_disorders]" type="checkbox" value="">Eating Disorders</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][addiction]" type="checkbox" value="">Addiction</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][grief]" type="checkbox" value="">Grief</label>
+        </div>
+      </div>
   </div>
+    <div class="row">
+      <div class="col-sm-6">
+      </div>
+         <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+
 </div>
 
 
-<!-- t.string   "title"
-     t.string   "name"
-     t.string   "photo_url"
-     t.string   "profile_url"
-     t.string   "email"
-     t.string   "phone_number" -->
 
