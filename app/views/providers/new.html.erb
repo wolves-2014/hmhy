@@ -57,27 +57,27 @@
         </div>
         <div class="checkbox">
          <%= f.label "Depression" %>
-         <%= f.check_box :depression, class: 'checkbox' %>
+         <%= f.check_box "competency[][depression]", class: 'checkbox' %>
         </div>
         <div class="checkbox">
          <%= f.label "Anxiety" %>
-         <%= f.check_box :anxiety, class: 'checkbox' %>
+         <%= f.check_box "competency[][anxiety]", class: 'checkbox' %>
         </div>
         <div class="checkbox">
          <%= f.label "ADD/ADHD" %>
-         <%= f.check_box :adhd, class: 'checkbox' %>
+         <%= f.check_box "competency[][adhd]", class: 'checkbox' %>
         </div>
         <div class="checkbox">
          <%= f.label "Eating Disorders" %>
-         <%= f.check_box :eating_disorders, class: 'checkbox' %>
+         <%= f.check_box "competency[][eating_disorders]", class: 'checkbox' %>
         </div>
         <div class="checkbox">
          <%= f.label "Addiction" %>
-         <%= f.check_box :addiction, class: 'checkbox' %>
+         <%= f.check_box "competency[][addiction]", class: 'checkbox' %>
         </div>
         <div class="checkbox">
          <%= f.label "Grief" %>
-         <%= f.check_box :grief, class: 'checkbox' %>
+         <%= f.check_box "competency[][grief]", class: 'checkbox' %>
         </div>
         <%= f.submit 'Submit', class: 'btn btn-primary' %>
       <% end %>

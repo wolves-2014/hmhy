@@ -23,31 +23,16 @@ class ProvidersController < ApplicationController
   def new
   end
 
-  #need to create competency specialties still
-  #also locations
   def create
-    competencies = {}
-    competencies[:depression] = params[:provider].delete("depression")
-    competencies[:anxiety] = params[:provider].delete("anxiety")
-    competencies[:adhd] = params[:provider].delete("adhd")
-    competencies[:addiction] = params[:provider].delete("addiction")
-    competencies[:eating_disorders] = params[:provider].delete("eating_disorders")
-    competencies[:grief] = params[:provider].delete("grief")
-    selected_competencies = competencies.select {|k,v| v.to_i == 1}.keys
-    params
-    binding.pry
-    #create the competencies entries
-    params[:provider].delete("competency")
+    competencies = params[:provider][:competency]
+    selected_competencies = competencies[0].select {|k,v| v.to_i == 1}.keys
     location = params[:provider][:zip_code].to_i
-    #create the location entry
-    #remove the location key from the provider hash
     @provider = Provider.new(provider_params)
     if @provider.save
       selected_competencies.each do |competency|
         Competency.create!(provider: @provider, assessment: Assessment.find_by(word: competency.to_s))
       end
       Residence.create!(provider: @provider, location: Location.find_by(zip_code: location))
-      binding.pry
       redirect_to root_path
     else
       render "new"
