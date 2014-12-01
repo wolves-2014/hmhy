@@ -19,4 +19,9 @@ class Provider < ActiveRecord::Base
     providers_by_assessment.delete(nil)
     providers_by_assessment
   end
+
+  def distance_from(location)
+    distance = self.location.distance_from(location)
+    (distance * 10).round / 10.0
+  end
 end

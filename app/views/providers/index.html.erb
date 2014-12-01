@@ -7,7 +7,7 @@
     </div>
   </div>
   <% @providers.each do |provider| %>
-    <%= render partial: "show", layout: false, locals: {provider: provider} %>
+    <%= render partial: "show", layout: false, locals: {provider: provider, location: @location} %>
   <% end %>
 </div>
 
