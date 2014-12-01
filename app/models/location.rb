@@ -1,6 +1,5 @@
 class Location < ActiveRecord::Base
-  has_many :residences
-  has_many :providers, through: :residences
+  has_many :providers
 
   before_save :latitude, :longitude, presence: true # does this do anything?
   validates :zip_code, uniqueness: true, presence: true

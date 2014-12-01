@@ -32,10 +32,14 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="773" y="201" name="providers">
+</datatypes><table x="639" y="317" name="providers">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="location_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="locations" row="id" />
+</row>
 <row name="title" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -115,7 +119,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="358" y="349" name="locations">
+<table x="440" y="339" name="locations">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -128,22 +132,6 @@
 <row name="latitude" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="553" y="301" name="residences">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="provider_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="providers" row="id" />
-</row>
-<row name="location_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="locations" row="id" />
-</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
