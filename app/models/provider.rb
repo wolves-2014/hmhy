@@ -17,18 +17,6 @@ class Provider < ActiveRecord::Base
       provider if matching_assessments.count == assessments.count
     end
     providers_by_assessment.delete(nil)
-
     providers_by_assessment
-
-
-     # = assessments.map{|assessment| assessment.providers.to_a}
-
-    # providers_by_assessment = rank_providers(assessments)
-    # providers_by_assessment
-    # providers[0..4] #must be changed
-  end
-
-  def self.rank_providers(assessments)
-    binding.pry
   end
 end
