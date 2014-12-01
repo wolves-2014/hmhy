@@ -1,23 +1,19 @@
 <div class="row">
-  <div class="col-sm-3">
+  <div class="col-sm-4">
   </div>
-  <div class="col-sm-6" id="result-partial-container">
+  <div class="col-sm-4" id="result-partial-container">
     <div class="row">
       <div class="col-sm-3">
         <a href="<%=provider.profile_url%>" target="_blank"><img src=<%= provider.photo_url %> class="img-rounded"/></a>
       </div>
+      <div class="col-sm-2">
+      </div>
       <div class="col-sm-6">
         <a href=<%=provider.profile_url%> target="_blank"><h3><%= provider.name %></h3></a>
-        <p><%= provider.email %></p>
         <p><%= provider.distance_from(@location) %> miles away</p>
-        <% provider.assessments.each do |a| %>
-          <span><%= a.word %></span>
-        <% end %>
-      </div>
-      <div class="col-sm-3">
         <p><%= provider.phone_number %></p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-providerid="<%=provider.id %>" data-providername="<%= provider.name %>">Contact</button>
       </div>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-providerid="<%=provider.id %>" data-providername="<%= provider.name %>">Contact</button>
     </div>
   </div>
 </div>

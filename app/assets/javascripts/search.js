@@ -21,7 +21,7 @@ $(document).ready (function(){
       if (parseInt(wordLevel) < 3) {
         $(".word-container").replaceWith(response.feelings_html);
         if (!$('#feeling-header').hasClass('changed')) {
-          $("#feeling-header").html("<h3>You said you're feeling " + selected_feeling + ".</h3><br><h4>Do any of these apply to you?</h4>");
+          $("#feeling-header").html("<h3 class='text-shadow'>You said you're feeling " + selected_feeling + ".</h3><h2 class='text-shadow'>Do any of these apply to you?</h2>");
           $("#feeling-header").addClass('changed');
         }
       }
