@@ -14,10 +14,10 @@
       <div class="col-sm-6" id="result-partial-container">
         <div class="row">
           <div class="col-sm-3">
-            <img src=<%= provider.photo_url %> class="img-rounded"/>
+            <a href=<%=provider.profile_url%>><img src=<%= provider.photo_url %> class="img-rounded"/></a>
           </div>
           <div class="col-sm-6">
-            <h3><%= provider.name %></h3>
+            <a href=<%=provider.profile_url%>><h3><%= provider.name %></h3></a>
             <p><%= provider.email %></p>
             <% provider.assessments.each do |a| %>
               <span><%= a.word %></span>
