@@ -3,7 +3,6 @@ require 'rails_helper'
 describe Provider do
   it {should have_many(:competencies)}
   it {should have_many(:assessments)}
-  it {should have_many(:residences)}
   it {should have_many(:locations)}
   it {should validate_presence_of(:name)}
   it {should validate_presence_of(:profile_url)}

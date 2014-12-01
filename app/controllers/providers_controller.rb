@@ -2,7 +2,6 @@ class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
     # if params[:location]
-    #
     #   locations = Location.near(params[:location], params[:distance])
     # else
     #   locations = Location.near([request.location.latitude, request.location.longitude], 5)
@@ -12,6 +11,7 @@ class ProvidersController < ApplicationController
     assessments = Assessment.determine_prevalent(feelings)
     @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
     @feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq if feelings.first.ranking == 2
+    # reduce distance, until providers are 3 or distance is 0.5 (or something)
     @providers = Provider.match(assessments, locations)
     # session will keep selected feelings
     respond_to do |format|
