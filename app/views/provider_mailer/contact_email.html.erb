@@ -5,11 +5,19 @@
   </head>
   <body>
     <h1>Hello, <%= @provider.name %></h1>
+    <% if @client_name %>
+    <%= @client_name %><p>is seeking to contact you from Spring.com</p>
+    <% else %>
+    <p>A client is seeking to contact you from Spring.com.</p>
+    <% end %>
+    Additional Information:
+    <% if @message %>
+      <p><%= @message %></p>
+    <% else %>
+      <p>Not provided</p>
+    <% end %>
     <p>
-      <%= @client_name %> is seeking to contact you from Spring.com<br>
-    </p>
-    <p>
-      Please email them back at <%= @client_email %>
+      Please email them back at <%= @client_email %>.
     </p>
   </body>
 </html>

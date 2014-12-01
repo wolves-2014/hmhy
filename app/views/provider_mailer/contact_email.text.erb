@@ -1,6 +1,16 @@
 Hello, <%= @provider.name %>
 ===============================================
-
+<% if @client_name %>
 <%= @client_name %> is seeking to contact you from Spring.com
+<% else %>
+A client is seeking to contact you from Spring.com
+<% end %>
 
-Please email them back at <%= @client_email %>
+Additional Information:
+<% if @message %>
+  <%= @message %>
+  <% else %>
+  Not Provided
+<% end %>
+
+Please email them back at <%= @client_email %>.
