@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-6" id="result-partial-container">
+    <div class="row">
+      <div class="col-sm-3">
+        <a href=<%=provider.profile_url%>><img src=<%= provider.photo_url %> class="img-rounded"/></a>
+      </div>
+      <div class="col-sm-6">
+        <a href=<%=provider.profile_url%>><h3><%= provider.name %></h3></a>
+        <p><%= provider.email %></p>
+        <% provider.assessments.each do |a| %>
+          <span><%= a.word %></span>
+        <% end %>
+      </div>
+      <div class="col-sm-3">
+        <p><%= provider.phone_number %></p>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Contact Me
+      </button>
+    </div>
+  </div>
+</div>
