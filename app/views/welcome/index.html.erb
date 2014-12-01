@@ -20,7 +20,7 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4 text-center" id="feeling-header">
-      <h2>Today I feel...</h2>
+      <h2 class='text-shadow'>Today I feel...</h2>
     </div>
   </div>
 
@@ -29,13 +29,6 @@
     </div>
 
   <div class="row">
-    <div class="col-sm-5">
-    </div>
-    <div class="col-sm-3">
-      <%= form_for :location, url: "#", html: {id: "search"} do |f| %>
-        <p><%= f.text_field :location, :placeholder => "zip" %><%= f.submit "Search" %></p>
-      <% end %>
-    </div>
   </div>
 
 </div>
@@ -46,7 +39,7 @@
     <div class="col-sm-4">
     </div>
     <div class="col-sm-4 text-center">
-      <h3>Click on some words above to help us help you...</h3>
+      <h3 class="text-shadow2">Click on some words above to help us help you...</h3>
     </div>
   </div>
 
