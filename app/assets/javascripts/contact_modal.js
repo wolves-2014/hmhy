@@ -1,30 +1,35 @@
+var providerData = function() {
+  this.id;
+}
+
+var provider = new providerData()
+
 $(document).ready (function(){
   $('body').on('show.bs.modal', '#contactModal', function (event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var providerId = button.data('providerid');
-    var recipient = button.data('providername');// Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var button = $(event.relatedTarget);
+    provider.id = button.data('providerid');
+    var recipient = button.data('providername');
     var modal = $(this);
     modal.find('.modal-title').text('New message to ' + recipient);
   });
 
   $('body').on('click', '#privacy-terms', function() {
-    $('#privacy-terms').html('<p>hello world</p>')
+    $('#privacy-terms').html('<p>We do not read or retain your e-mail. A copy will be sent to you for your records. Spam filters may prevent your e-mail from reaching the therapist. The therapist should respond to you by e-mail, although we recommend that you follow up with a phone call. If you prefer corresponding via phone, please leave your contact number.</p>')
   });
 
   $('body').on('click', '#contact-me-button', function(e){
     e.preventDefault();
     var message = $('#message-text').val();
-    var userEmail = $('#user-email').val();
+    var clientEmail = $('#client-email').val();
+    var clientName = $('#client-name').val();
 
     var request = $.ajax({
       url: '/mailer',
       type: 'POST',
-      data: {provider_id: providerId, user_email: userEmail, message: message }
+      data: {provider_id: provider.id, client_email: clientEmail, client_name: clientName, message: message }
     });
 
-    request.done(function(response){
+    request.success(function(response){
       console.log(response);
     });
 
