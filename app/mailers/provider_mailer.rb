@@ -1,9 +1,8 @@
 class ProviderMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "admin@spring.com"
 
   def welcome_email(provider)
     @provider = provider
-    @url  = 'http://example.com/login'
     mail(to: @provider.email, subject: 'Welcome to Spring')
   end
 
@@ -11,7 +10,6 @@ class ProviderMailer < ActionMailer::Base
     @client_name = client_name
     @client_email = client_email
     @provider = provider
-    @url  = 'http://example.com/login'
     mail(to: @provider.email, subject: 'Someone needs your help')
   end
 end

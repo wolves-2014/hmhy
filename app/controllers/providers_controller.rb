@@ -31,15 +31,17 @@ class ProvidersController < ApplicationController
     competencies_array = []
     competencies_hash = params[:competency][0]
     competencies_hash.each_key { |key| competencies_array << key }
-    location = params[:provider][:zip_code].to_i
-    @provider = Provider.new(provider_params)
+    zip_code = params[:provider][:zip_code].to_i
+    location = Location.find_or_create_by(zip_code: zip_code)
+    @provider = location.providers.new(provider_params)
+    binding.pry
     if @provider.save
+      binding.pry
       ProviderMailer.welcome_email(@provider).deliver
       competencies_array.each do |competency|
-        Competency.create!(provider: @provider, assessment: Assessment.find_by(word: competency))
+        assessment = Assessment.find_by(word: competency)
+        @provider.competencies.create(assessment: assessment)
       end
-      Residence.create!(provider: @provider, location: Location.find_by(zip_code: location))
-      binding.pry
       redirect_to root_path
     else
       render "new"
