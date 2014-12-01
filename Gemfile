@@ -53,6 +53,8 @@ gem 'postgres-copy'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'roadie', '~> 2.4'
+# gem 'roadie-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

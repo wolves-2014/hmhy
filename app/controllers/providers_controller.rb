@@ -29,8 +29,8 @@ class ProvidersController < ApplicationController
     competencies_hash.each_key { |key| competencies_array << key }
     location = params[:provider][:zip_code].to_i
     @provider = Provider.new(provider_params)
-    binding.pry
     if @provider.save
+      ProviderMailer.welcome_email(@provider).deliver
       competencies_array.each do |competency|
         Competency.create!(provider: @provider, assessment: Assessment.find_by(word: competency))
       end
