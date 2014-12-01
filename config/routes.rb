@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :feelings, only: [:index, :show]
   resources :providers
+  resource :mailer, only: [:create]
   # resources :locations, only: []
   # resources :assessments
   # The priority is based upon order of creation: first created -> highest priority.
