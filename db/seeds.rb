@@ -111,8 +111,6 @@ Location.copy_from 'db/us_postal_codes.csv'
 
 locations = Location.near(60606.to_s, 500).to_a
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 @filename = "db/therapists_in_60000.csv"
 counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
@@ -130,46 +128,6 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     valid_competencies = []
     all_competencies = JSON.parse line[7]
     all_competencies.each do |competency|
-=======
-@filename = "db/therapists.csv"
-counter = 0
-CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
-  new_provider = Provider.new(
-    title: line[1],
-    name: line[2],
-    photo_url: line[3],
-    profile_url: line[4],
-    email: "no@email.com",
-    phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end)
-    )
-    if location = Location.find_by(zip_code: line[6].to_i)
-      new_provider.save(validate: false)
-      new_provider.residences.create!(location: location)
-
-
-      valid_competencies = []
-      all_competencies = JSON.parse line[7]
-      all_competencies.each do |competency|
->>>>>>> refined seed method
-=======
-@filename = "db/therapists_in_60000.csv"
-counter = 0
-CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
-  if location = Location.find_by(zip_code: line[6].to_i)
-    new_provider = location.providers.new(
-      title: line[1],
-      name: line[2],
-      photo_url: line[3],
-      profile_url: line[4],
-      email: "no@email.com",
-      phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end)
-      )
-    new_provider.save(validate: false)
-
-    valid_competencies = []
-    all_competencies = JSON.parse line[7]
-    all_competencies.each do |competency|
->>>>>>> working model, searching by location
       if matched_competency = competency[/Depression|Anxiety|Grief|ADHD|Eating Disorders|Addiction/]
         valid_competencies << matched_competency.downcase
       end
@@ -182,14 +140,7 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     end
     break if counter > 1000
     counter += 1
-<<<<<<< HEAD
-<<<<<<< HEAD
     puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 100 == 0
-=======
-    puts "Creating entry for Psychology Today user: #{line[0]}" #if counter % 1000 == 0
->>>>>>> refined seed method
-=======
-    puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 100 == 0
->>>>>>> working model, searching by location
+
   end
 end
