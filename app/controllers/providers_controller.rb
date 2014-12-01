@@ -2,15 +2,14 @@ class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
     # if params[:location]
-    #   # locations = Location.near(params[:location], params[:distance])
+    #
+    #   locations = Location.near(params[:location], params[:distance])
     # else
     #   locations = Location.near([request.location.latitude, request.location.longitude], 5)
     # end
-    locations = Location.near(60606.to_s, 2)
+    location = Location.find_by(zip_code: 60606.to_s)
+    locations = location.nearbys(1)
     assessments = Assessment.determine_prevalent(feelings)
-
-    # @secondary_feelings = Feeling.select(2, assessments) #unless feelings.any?{|feel| feel.ranking >= 2}
-    # @tertiary_feelings = Feeling.select(3, assessments) #unless feelings.all?{|feel| feel.ranking == 1}
     @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
     @feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq if feelings.first.ranking == 2
     @providers = Provider.match(assessments, locations)
