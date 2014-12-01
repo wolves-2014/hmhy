@@ -7,5 +7,6 @@ class MailersController < ApplicationController
       message: params[:message]
     }
     ProviderMailer.contact_email(contact_information).deliver
+    head 200
   end
 end

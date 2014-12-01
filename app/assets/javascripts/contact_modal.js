@@ -30,13 +30,20 @@ $(document).ready (function(){
     });
 
     request.success(function(response){
-      console.log(response);
+      $('#contactModal').modal('hide');
+      $('#successModal').modal('show');
     });
 
     request.fail(function(response){
       console.log(response);
+      $('#contactModal').modal('hide');
+      $('#successModal').modal('show');
     });
   });
+
+  // $('body').on('hidden.bs.modal', '#successModal', function (e) {
+  //   $('#privacy-terms').html('<a href="#privacy-terms">Your privacy is important to us.</a>');
+  // });
 
   $('body').on('hidden.bs.modal', '#contactModal', function (e) {
     $('#privacy-terms').html('<a href="#privacy-terms">Your privacy is important to us.</a>');
