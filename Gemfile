@@ -46,6 +46,7 @@ gem 'rails_12factor', group: :production
 
 gem 'postgres-copy'
 
+gem 'activerecord-import'
 
 
 # Use ActiveModel has_secure_password

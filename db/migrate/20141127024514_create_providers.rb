@@ -1,6 +1,7 @@
 class CreateProviders < ActiveRecord::Migration
   def change
     create_table :providers do |t|
+      t.belongs_to :location
       t.string :title
       t.string :name
       t.string :photo_url

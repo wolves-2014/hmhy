@@ -11,7 +11,7 @@ primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "ove
 
 secondary_feelings = ["sleeping too much", "not sleeping enough", "no appetite", "avoiding complicated tasks",
                       "guilty", "restless", "strained relationships"]
-tertiary_feelings =["hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
+tertiary_feelings =["feeling hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
                     "often losing things", "making careless mistakes", "losing control when eating", "disliking own body",
                      "thinking about weight too much", "exercising too much", "dieting too much", "lost someone important",
                      "like I'm a slave to something", "wasting time on chasing something"]
@@ -109,50 +109,37 @@ assessments[5].indications.create!(
 
 Location.copy_from 'db/us_postal_codes.csv'
 
-locations = Location.near(60606.to_s, 50).to_a
+locations = Location.near(60606.to_s, 500).to_a
 
-@filename = "db/therapists_for_test.csv"
+@filename = "db/therapists_in_60000.csv"
 counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
-  new_provider = Provider.create!(
-    title: line[1],
-    name: line[2],
-    photo_url: line[3],
-    profile_url: line[4],
-    email: "no@email.com",
-    phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end))
+  if location = Location.find_by(zip_code: line[6].to_i)
+    new_provider = location.providers.new(
+      title: line[1],
+      name: line[2],
+      photo_url: line[3],
+      profile_url: line[4],
+      email: "no@email.com",
+      phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end)
+      )
+    new_provider.save(validate: false)
 
-  Residence.create!(provider: new_provider, location: locations.sample)
-
-  valid_competencies = []
-  all_competencies = JSON.parse line[7]
-  all_competencies.each do |competency|
-    if matched_competency = competency[/Depression|Anxiety|Grief|ADHD|Eating Disorders|Addiction/]
-      valid_competencies << matched_competency.downcase
+    valid_competencies = []
+    all_competencies = JSON.parse line[7]
+    all_competencies.each do |competency|
+      if matched_competency = competency[/Depression|Anxiety|Grief|ADHD|Eating Disorders|Addiction/]
+        valid_competencies << matched_competency.downcase
+      end
     end
-  end
-  unless valid_competencies == []
-    valid_competencies.uniq.each do |competency|
-      Competency.create!(assessment: Assessment.find_by(word: competency), provider: new_provider)
+    unless valid_competencies == []
+      valid_competencies.uniq.each do |competency|
+        assessment = Assessment.find_by(word: competency)
+        new_provider.competencies.create!(assessment: assessment)
+      end
     end
+    break if counter > 1000
+    counter += 1
+    puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 100 == 0
   end
-  counter += 1
-  puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 1000 == 0
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

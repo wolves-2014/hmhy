@@ -22,7 +22,7 @@ class Assessment < ActiveRecord::Base
 
   def self.sort_assessments(correlations)
     highest_value = correlations.sort_by{|correlations, rank| rank}.last.last
-    correlations.select{|correlations, rank| rank >= highest_value - 1}.keys
+    correlations.select{|correlations, rank| rank == highest_value}.keys
   end
 
   def secondary_feelings
