@@ -4,12 +4,12 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       </button>
-      <a class="navbar-brand" href="#">Spring</a>
+      <a class="navbar-brand" href="#">Signing up is free & easy...</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a id="signup" href="/providers/new">Provider Sign Up</a></li>
+        <li><a id="signup" href="/providers/new">Home</a></li>
       </ul>
     </div>
   </div>
@@ -17,14 +17,13 @@
 
 <div class="container" id="provider-signup-container">
   <div class="row">
-    <div class="col-sm-offset-4">
-      <h2>Signing up is free & easy...</h2>
-    </div>
+      <h2>Create Profile<h2>
   </div>
   <div class="row">
     <div class="col-sm-1">
     </div>
     <div class="col-sm-5">
+
       <%= form_for :provider, url: providers_path do |f| %>
         <div class="form-group">
           <%= f.label :name, "Name:" %>
@@ -39,6 +38,10 @@
           <%= f.text_field :email, placeholder: "joeblow@example.com", class: 'form-control' %>
         </div>
         <div class="form-group">
+          <%= f.label :zip, 'Zip Code:' %>
+          <%= f.text_field :zip_code, class: 'form-control' %>
+        </div>
+        <div class="form-group">
           <%= f.label :phone_number, 'Phone Number:' %>
           <%= f.text_field :phone_number, class: 'form-control' %>
         </div>
@@ -50,38 +53,40 @@
           <%= f.label :profile_url, "Profile URL:" %>
           <%= f.text_field :profile_url, class: 'form-control' %>
         </div>
-        <div class="checkbox">
-         <%= f.label "Depression" %>
-         <%= f.check_box :"disorder[depression]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Anxiety" %>
-         <%= f.check_box :"disorder[anxiety]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "ADD/ADHD" %>
-         <%= f.check_box :"disorder[add_adhd]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Eating Disorders" %>
-         <%= f.check_box :"disorder[eating_disorder]", class: 'checkbox' %>
-        </div>
-        <div class="checkbox">
-         <%= f.label "Addiction" %>
-         <%= f.check_box :"disorder[addiction]", class: 'checkbox' %>
-        </div>
-        <%= f.submit 'Submit', class: 'btn btn-primary' %>
-      <% end %>
       </div>
-
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-4">
+        <h4>Areas of Specialty</h4>
+        <div class="checkbox">
+          <label><input name="competency[][depression]" type="checkbox" value="">Depression</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][anxiety]" type="checkbox" value="">Anxiety</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][adhd]" type="checkbox" value="">Add/ADHD</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][eating_disorders]" type="checkbox" value="">Eating Disorders</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][addiction]" type="checkbox" value="">Addiction</label>
+        </div>
+        <div class="checkbox">
+          <label><input name="competency[][grief]" type="checkbox" value="">Grief</label>
+        </div>
+      </div>
   </div>
+    <div class="row">
+      <div class="col-sm-6">
+      </div>
+         <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+
 </div>
 
 
-<!-- t.string   "title"
-     t.string   "name"
-     t.string   "photo_url"
-     t.string   "profile_url"
-     t.string   "email"
-     t.string   "phone_number" -->
 

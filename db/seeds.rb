@@ -8,6 +8,7 @@
 require 'csv'
 
 primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "overwhelmed", "afraid"]
+
 secondary_feelings = ["sleeping too much", "not sleeping enough", "no appetite", "avoiding complicated tasks",
                       "guilty", "restless", "strained relationships"]
 tertiary_feelings =["hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
