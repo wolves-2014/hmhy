@@ -3,7 +3,8 @@ class EmailProcessor
     @email = email
   end
 
-  def process
+  def self.process
+    binding.pry
     # all of your application-specific code here - creating models,
     # processing reports, etc
 

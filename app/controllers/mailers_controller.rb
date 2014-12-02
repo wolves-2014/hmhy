@@ -9,4 +9,8 @@ class MailersController < ApplicationController
     ProviderMailer.contact_email(contact_information).deliver
     head 200
   end
+
+  def incoming
+    binding.pry
+  end
 end
