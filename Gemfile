@@ -40,6 +40,7 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
+gem 'heroku-deflater', group: :production
 gem 'rails_12factor', group: :production
 
 gem 'postgres-copy'
