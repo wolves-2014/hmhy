@@ -9,9 +9,9 @@ class ProvidersController < ApplicationController
     end
     session[:location_id] = @location.id
 
-    location_data = Geocoder.search(params[:location][:zip_code]).first
-    @location = Location.find_or_create_by(zip_code: location_data.postal_code)
-    session[:location_id] = @location.id
+    # location_data = Geocoder.search(params[:location][:zip_code]).first
+    # @location = Location.find_or_create_by(zip_code: location_data.postal_code)
+    # session[:location_id] = @location.id
 
     locations = @location.find_within(params[:distance])
 
@@ -20,7 +20,7 @@ class ProvidersController < ApplicationController
 
     @feelings = assessments.map{|a| a.feeling_by_rank(feelings.first.rank)}.flatten.uniq
 
-    @providers = Provider.match(assessments, locations)
+    @providers = MatchMaker.new(assessments, locations).matches
 
     respond_to do |format|
       format.json {

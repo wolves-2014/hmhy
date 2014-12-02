@@ -10,6 +10,7 @@ class Assessment < ActiveRecord::Base
     correlations = {}
     feelings.each do |feeling|
       feeling.assessments.each do |assessment|
+        # correlations[assessment] = feeling.ranking || 0
         if correlations[assessment]
           correlations[assessment] += feeling.ranking
         else
@@ -21,7 +22,7 @@ class Assessment < ActiveRecord::Base
   end
 
   def self.sort_assessments(correlations)
-    highest_value = correlations.sort_by{|correlations, rank| rank}.last.last
+    highest_value = correlations.values.max
     correlations.select{|correlations, rank| rank == highest_value}.keys
   end
 
