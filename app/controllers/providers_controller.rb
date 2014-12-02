@@ -1,10 +1,16 @@
 class ProvidersController < ApplicationController
+  include LocationsHelper
+
   def index
     if session[:location_id]
       @location = Location.find(session[:location_id])
     else
-      @location = Location.by_ip_address(request.location)
+      @location = Location.find_or_create_by_location_data(location_data)
     end
+    session[:location_id] = @location.id
+
+    location_data = Geocoder.search(params[:location][:zip_code]).first
+    @location = Location.find_or_create_by(zip_code: location_data.postal_code)
     session[:location_id] = @location.id
 
     locations = @location.find_within(params[:distance])
@@ -12,14 +18,7 @@ class ProvidersController < ApplicationController
     feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
 
-
-
-    @feelings = case feelings.first.rank
-    when 1
-      assessments.map{|a| a.secondary_feelings}
-    when 2
-      assessments.map{|a| a.tertiary_feelings}
-    end.flatten.uniq
+    @feelings = assessments.map{|a| a.feeling_by_rank(feelings.first.rank)}.flatten.uniq
 
     @providers = Provider.match(assessments, locations)
 

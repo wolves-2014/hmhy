@@ -25,12 +25,8 @@ class Assessment < ActiveRecord::Base
     correlations.select{|correlations, rank| rank == highest_value}.keys
   end
 
-  def secondary_feelings
-    self.feelings.where(ranking: 2)
-  end
-
-  def tertiary_feelings
-    self.feelings.where(ranking: 3)
+  def feelings_by_rank
+    feelings = self.feelings.where(rank: rank)
   end
 end
 
