@@ -1,19 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      </button>
-      <a class="navbar-brand" href="#">Signing up is free & easy...</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a id="signup" href="/providers/new">Home</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%= render 'navbar', layout: false %>
 
 <div class="container" id="provider-signup-container">
   <div class="row">
@@ -23,7 +8,6 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-5">
-
       <%= form_for :provider, url: providers_path do |f| %>
         <div class="form-group">
           <%= f.label :name, "Name:" %>
