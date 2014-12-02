@@ -8,8 +8,8 @@ class Provider < ActiveRecord::Base
   validates :name, :profile_url, :phone_number, presence: true
   # validates :profile_url, uniqueness: true
 
-  def treatment_for?(assessments)
-    (self.assessments & assessments).count == assesments.count
+  def treatment_for?(provided_assessments)
+    (self.assessments & provided_assessments).count == provided_assessments.count
   end
 
   def distance_from(location)

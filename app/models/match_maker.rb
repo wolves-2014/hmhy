@@ -11,7 +11,7 @@ class MatchMaker
   end
 
   def matches
-    providers_by_location.select do |provider|
+    providers_by_locations.select do |provider|
       provider.treatment_for?(assessments)
     end.first(10)
   end

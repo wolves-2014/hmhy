@@ -15,7 +15,7 @@ class Assessment < ActiveRecord::Base
     correlations.select{|correlations, rank| rank == highest_value}.keys
   end
 
-  def feelings_by_rank
+  def feelings_by_rank(rank)
     feelings = self.feelings.where(rank: rank)
   end
 end

@@ -120,7 +120,7 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
       name: line[2],
       photo_url: line[3],
       profile_url: line[4],
-      email: "no@email.com",
+      email: "help@example.com",
       phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end)
       )
     new_provider.save(validate: false)

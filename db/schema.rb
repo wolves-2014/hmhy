@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20141127024518) do
 
   create_table "feelings", force: true do |t|
     t.string   "word"
-    t.integer  "ranking"
+    t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

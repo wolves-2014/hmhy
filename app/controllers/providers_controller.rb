@@ -12,16 +12,11 @@ class ProvidersController < ApplicationController
     # location_data = Geocoder.search(params[:location][:zip_code]).first
     # @location = Location.find_or_create_by(zip_code: location_data.postal_code)
     # session[:location_id] = @location.id
-
-    locations = @location.find_within(params[:distance])
-
     feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
-
-    @feelings = assessments.map{|a| a.feeling_by_rank(feelings.first.rank)}.flatten.uniq
-
+    @feelings = assessments.map{|a| a.feelings_by_rank(feelings.first.rank)}.flatten.uniq
+    locations = @location.find_within(params[:distance])
     @providers = MatchMaker.new(assessments, locations).matches
-
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", layout: false),

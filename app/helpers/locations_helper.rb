@@ -6,4 +6,5 @@ module LocationsHelper
     else
       request.location
     end
+  end
 end
