@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, http://code.google.com/p/wwwsqldesigner/ -->
-<!-- Active URL: https://socrates.devbootcamp.com/sql.html -->
+<!-- Active URL: https://socrates.devbootcamp.com/sql -->
 <sql>
 <datatypes db="mysql">
-  <group label="Numeric" color="rgb(238,238,170)">
-    <type label="Integer" length="0" sql="INTEGER" re="INT" quote=""/>
-    <type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
-    <type label="Single precision" length="0" sql="FLOAT" quote=""/>
-    <type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
-  </group>
-
-  <group label="Character" color="rgb(255,200,200)">
-    <type label="Char" length="1" sql="CHAR" quote="'"/>
-    <type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
-    <type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
-    <type label="Binary" length="1" sql="BINARY" quote="'"/>
-    <type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
-    <type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
-  </group>
-
-  <group label="Date &amp; Time" color="rgb(200,255,200)">
-    <type label="Date" length="0" sql="DATE" quote="'"/>
-    <type label="Time" length="0" sql="TIME" quote="'"/>
-    <type label="Datetime" length="0" sql="DATETIME" quote="'"/>
-    <type label="Year" length="0" sql="YEAR" quote=""/>
-    <type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
-  </group>
-
-  <group label="Miscellaneous" color="rgb(200,200,255)">
-    <type label="ENUM" length="1" sql="ENUM" quote=""/>
-    <type label="SET" length="1" sql="SET" quote=""/>
-    <type label="Bit" length="0" sql="bit" quote=""/>
-  </group>
-</datatypes><table x="639" y="317" name="providers">
+<group label="Numeric" color="rgb(238,238,170)">
+<type label="Integer" length="0" sql="INTEGER" re="INT" quote=""/>
+<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+</group>
+<group label="Character" color="rgb(255,200,200)">
+<type label="Char" length="1" sql="CHAR" quote="'"/>
+<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+<type label="Binary" length="1" sql="BINARY" quote="'"/>
+<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+</group>
+<group label="Date &amp; Time" color="rgb(200,255,200)">
+<type label="Date" length="0" sql="DATE" quote="'"/>
+<type label="Time" length="0" sql="TIME" quote="'"/>
+<type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+<type label="Year" length="0" sql="YEAR" quote=""/>
+<type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+</group>
+<group label="Miscellaneous" color="rgb(200,200,255)">
+<type label="ENUM" length="1" sql="ENUM" quote=""/>
+<type label="SET" length="1" sql="SET" quote=""/>
+<type label="Bit" length="0" sql="bit" quote=""/>
+</group>
+</datatypes><table x="648" y="307" name="providers">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -58,11 +55,20 @@
 <row name="phone_number" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="sliding_scale" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="min_price" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="max_price" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="401" y="196" name="assessments">
+<table x="465" y="287" name="assessments">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -73,7 +79,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="252" y="64" name="indications">
+<table x="317" y="193" name="indications">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -89,7 +95,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="86" y="216" name="feelings">
+<table x="180" y="277" name="feelings">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -103,7 +109,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="583" y="88" name="competencies">
+<table x="634" y="157" name="competencies">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -119,7 +125,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="440" y="339" name="locations">
+<table x="485" y="435" name="locations">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -132,6 +138,60 @@
 <row name="latitude" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="990" y="234" name="Insurance">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="986" y="390" name="Age">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="830" y="230" name="Networks">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="provider_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="providers" row="id" />
+</row>
+<row name="insurance_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Insurance" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="830" y="386" name="age_foci">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="provider_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="providers" row="id" />
+</row>
+<row name="age_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="Age" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
