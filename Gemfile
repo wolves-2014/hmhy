@@ -55,6 +55,8 @@ gem 'dotenv-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 gem 'roadie', '~> 2.4'
+gem 'griddler'
+gem 'griddler-mandrill'
 # gem 'roadie-rails'
 
 # Use Capistrano for deployment
