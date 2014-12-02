@@ -1,17 +1,25 @@
 class ProvidersController < ApplicationController
   def index
-    feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
     if session[:location_id]
       @location = Location.find(session[:location_id])
     else
       @location = Location.by_ip_address(request.location)
-      session[:location_id] = @location.id
     end
-    params[:distance] ? distance = params[:distance] : distance = 2
-    locations = @location.nearbys(distance)
+    session[:location_id] = @location.id
+
+    locations = @location.find_within(params[:distance])
+
+    feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
-    @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
-    @feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq if feelings.first.ranking == 2
+
+
+
+    @feelings = case feelings.first.rank
+    when 1
+      assessments.map{|a| a.secondary_feelings}
+    when 2
+      assessments.map{|a| a.tertiary_feelings}
+    end.flatten.uniq
 
     @providers = Provider.match(assessments, locations)
 
@@ -32,9 +40,7 @@ class ProvidersController < ApplicationController
     zip_code = params[:provider][:zip_code].to_i
     location = Location.find_or_create_by(zip_code: zip_code)
     @provider = location.providers.new(provider_params)
-    binding.pry
     if @provider.save
-      binding.pry
       ProviderMailer.welcome_email(@provider).deliver
       competencies.each do |competency|
         assessment = Assessment.find_by(word: competency)
