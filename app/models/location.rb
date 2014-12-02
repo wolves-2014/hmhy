@@ -9,16 +9,22 @@ class Location < ActiveRecord::Base
 
   reverse_geocoded_by :latitude, :longitude do |obj,results|
     geo = results.first
-    obj.zip_code = geo.postal_code
-    obj.latitude = geo.latitude
-    obj.longitude = geo.longitude
+    # if existing_location = Location.find_by(zip_code: geo.postal_code)
+    #   binding.pry
+    #   obj = existing_location
+    # else
+      obj.zip_code = geo.postal_code
+      obj.latitude = geo.latitude
+      obj.longitude = geo.longitude
+    # end
   end
   after_validation :reverse_geocode
 
   acts_as_copy_target
 
-  def Location.by_ip_address(location_data)
-    location_data = Geocoder.search('74.122.9.196').first if location_data.ip == "127.0.0.1"
-    Location.find_or_create_by(latitude: location_data.latitude, longitude: location_data.longitude)
+  def self.by_ip_address(request_data)
+    request_data.ip == "127.0.0.1" ? loc_data = Geocoder.search('74.122.9.196').first : loc_data = request_data
+    full_location_data = Geocoder.search([loc_data.latitude, loc_data.longitude]).first
+    Location.find_or_create_by(zip_code: full_location_data.postal_code)
   end
 end
