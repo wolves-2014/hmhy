@@ -6,6 +6,7 @@ class Assessment < ActiveRecord::Base
 
   validates :word, uniqueness: true, presence: true
 
+  # Add tests for these two methods
   def self.determine_prevalent(feelings)
     correlations = {}
     feelings.each do |feeling|
@@ -17,11 +18,13 @@ class Assessment < ActiveRecord::Base
         end
       end
     end
+
     sort_assessments(correlations)
   end
 
   def self.sort_assessments(correlations)
-    highest_value = correlations.sort_by{|correlations, rank| rank}.last.last
+    highest_value = correlations.values.max
+
     correlations.select{|correlations, rank| rank == highest_value}.keys
   end
 

@@ -1,3 +1,4 @@
+# kill this?
 class Residence < ActiveRecord::Base
   belongs_to :location
   belongs_to :provider

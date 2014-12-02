@@ -1,10 +1,21 @@
 class ProvidersController < ApplicationController
+  def loc_data
+    # To avoid 0/0 lat/long from geocoding 127.0.0.1
+    if Rails.env.development?
+      Location.default_development_location
+    else
+      request.location
+    end
+  end
+
   def index
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
     if session[:location_id]
       @location = Location.find(session[:location_id])
     else
-      @location = Location.by_ip_address(request.location)
+      raise request.location.inspect
+
+      @location = Location.find_or_create_by_loc_data(loc_data)
       session[:location_id] = @location.id
     end
     params[:distance] ? distance = params[:distance] : distance = 2

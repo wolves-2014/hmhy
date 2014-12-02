@@ -1,23 +1,38 @@
+function BeaconSearch() {
+  this.feelings = [];
+  this.insurance = "";
+}
+
+BeaconSearch.prototype.findProviders = function(callback) {
+  return $.ajax({
+    url: "/providers",
+    type: 'GET',
+    data: {feelings: this.feelings, insurance: this.insurance}
+  });
+}
+
+var search = new BeaconSearch();
+
 $(document).ready (function(){
   $("#input-container").on('click', 'button', function(e) {
     e.preventDefault();
+
+    // Potentially be more particular here. Was the feeling added or removed?
+    // Instead of resetting all of search.feelings be more surgical
     $(this).toggleClass('active');
     var selected_feeling = $(this).text();
     var wordLevel = $('.word-container').attr('id');
     var active = $('.active')
-    var active_feelings = []
+
+    search.feelings = [];
     for (var i = 0; i < active.length; i++) {
       var feeling = $(active[i]).text();
-      active_feelings.push(feeling);
+      search.feelings.push(feeling);
     }
-    var request = $.ajax({
-      url: "/providers",
-      type: 'GET',
-      data: {feelings: active_feelings}
-    });
 
-    request.done(function(response){
+    search.findProviders.done(function(response){
       $("#results-container").replaceWith(response.providers_html);
+
       if (parseInt(wordLevel) < 3) {
         $(".word-container").replaceWith(response.feelings_html);
         if (!$('#feeling-header').hasClass('changed')) {
@@ -25,9 +40,7 @@ $(document).ready (function(){
           $("#feeling-header").addClass('changed');
         }
       }
-    });
-
-    request.fail(function(response){
+    }).fail(function(response){
       console.log(response);
     });
   });
