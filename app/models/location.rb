@@ -22,6 +22,10 @@ class Location < ActiveRecord::Base
 
   acts_as_copy_target
 
+  def find_within(distance = 3)
+    self.nearbys(distance)
+  end
+
   def self.by_ip_address(request_data)
     request_data.ip == "127.0.0.1" ? loc_data = Geocoder.search('74.122.9.196').first : loc_data = request_data
     full_location_data = Geocoder.search([loc_data.latitude, loc_data.longitude]).first
