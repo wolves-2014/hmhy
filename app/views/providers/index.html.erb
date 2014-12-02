@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-sm-4" id="refine-search">
       <p>Refine your search:</p>
-      <%= form_for :location, url: "#", html: {id: "search"} do |f| %>
-        <p><%= f.text_field :zip_code, :placeholder => "zip" %><%= f.submit "Search" %></p>
+      <%= form_for :location, url: "/locations", html: {id: "search"} do |f| %>
+        <p><%= f.text_field :zip_code, value: "", placeholder: "zip code" %><%= f.submit "Search" %></p>
         <label>Insurance:</label>
         <select name="age">
           <option value="Aetna">Aetna</option>

@@ -1,13 +1,13 @@
 class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
-    if params[:location]
-      @location = params[:location]
-      distance = params[:distance]
+    if session[:location_id]
+      @location = Location.find(session[:location_id])
     else
       @location = Location.by_ip_address(request.location)
-      distance = 2
+      session[:location_id] = @location.id
     end
+    params[:distance] ? distance = params[:distance] : distance = 2
     locations = @location.nearbys(distance)
     assessments = Assessment.determine_prevalent(feelings)
     @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
