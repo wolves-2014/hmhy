@@ -1,15 +1,14 @@
 class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
-    @location = Location.find_by(zip_code: 60606.to_s)
-    locations = @location.nearbys(2)
-    # if params[:location]
-    #   @location = Location.find_by(zip_code: params[:location])
-    #   distance = params[:distance]
-    #   locations = @location.nearbys(distance)
-    # else
-    #   locations = Location.near([request.location.latitude, request.location.longitude], 2)
-    # end
+    if params[:location]
+      @location = params[:location]
+      distance = params[:distance]
+    else
+      @location = Location.by_ip_address(request.location)
+      distance = 2
+    end
+    locations = @location.nearbys(distance)
     assessments = Assessment.determine_prevalent(feelings)
     @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
     @feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq if feelings.first.ranking == 2
@@ -29,9 +28,7 @@ class ProvidersController < ApplicationController
   end
 
   def create
-    competencies_array = []
-    competencies_hash = params[:competency][0]
-    competencies_hash.each_key { |key| competencies_array << key }
+    competencies = params[:competency][0].keys
     zip_code = params[:provider][:zip_code].to_i
     location = Location.find_or_create_by(zip_code: zip_code)
     @provider = location.providers.new(provider_params)
@@ -39,7 +36,7 @@ class ProvidersController < ApplicationController
     if @provider.save
       binding.pry
       ProviderMailer.welcome_email(@provider).deliver
-      competencies_array.each do |competency|
+      competencies.each do |competency|
         assessment = Assessment.find_by(word: competency)
         @provider.competencies.create(assessment: assessment)
       end
