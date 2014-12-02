@@ -7,8 +7,7 @@ class MatchMaker
   end
 
   def providers_by_locations
-    providers = locations.map{|location| location.providers.to_a}
-    providers.flatten.uniq
+    locations.map{|location| location.providers.to_a}.flatten.uniq
   end
 
   def matches
