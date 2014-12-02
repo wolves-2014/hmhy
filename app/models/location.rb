@@ -25,7 +25,7 @@ class Location < ActiveRecord::Base
 
   def self.find_or_create_by_location_data(location_data)
     geocoder_response = Geocoder.search([location_data.latitude, location_data.longitude]).first
-    Location.find_or_create_by(zip_code: geocoder_response.first.postal_code)
+    Location.find_or_create_by(zip_code: geocoder_response.postal_code)
   end
 
   def self.default_development_location

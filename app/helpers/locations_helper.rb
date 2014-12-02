@@ -4,7 +4,7 @@ module LocationsHelper
     if Rails.env.development?
       Location.default_development_location
     else
-      request.location
+      puts request.location
     end
   end
 end
