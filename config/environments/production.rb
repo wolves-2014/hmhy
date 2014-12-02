@@ -33,6 +33,8 @@ Rails.application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = true
+  config.static_cache_control = 'public, max-age=31536000'
+
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -66,7 +68,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "d134tl83426xg2.cloudfront.net"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
