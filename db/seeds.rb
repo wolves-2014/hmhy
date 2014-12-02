@@ -17,15 +17,15 @@ tertiary_feelings =["feeling hopeless", "indecisive", "often think about death",
                      "like I'm a slave to something", "wasting time on chasing something"]
 
 primary_feeling_objects = primary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, ranking: 1)
+  Feeling.create!(word: feeling, rank: 1)
 end
 
 secondary_feeling_objects = secondary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, ranking: 2)
+  Feeling.create!(word: feeling, rank: 2)
 end
 
 tertiary_feeling_objects = tertiary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, ranking: 3)
+  Feeling.create!(word: feeling, rank: 3)
 end
 
 assessments = ["depression", "addiction", "adhd", "eating disorders", "grief", "anxiety"]
@@ -120,7 +120,7 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
       name: line[2],
       photo_url: line[3],
       profile_url: line[4],
-      email: "no@email.com",
+      email: "help@example.com",
       phone_number: (if line[5] == "" then "(555) 555-5555" else line[5] end)
       )
     new_provider.save(validate: false)

@@ -2,7 +2,7 @@ class CreateFeelings < ActiveRecord::Migration
   def change
     create_table :feelings do |t|
       t.string :word
-      t.integer :ranking
+      t.integer :rank
 
       t.timestamps
     end

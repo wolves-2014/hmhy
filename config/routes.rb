@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :feelings, only: [:index, :show]
   resources :providers, only: [:index, :new, :create]
   resource :mailer, only: [:create]
-  resources :locations, only: [:create]
   # resources :assessments
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,20 +1,22 @@
 class ProvidersController < ApplicationController
+  include LocationsHelper
+
   def index
-    feelings = params[:feelings].map{|word| Feeling.find_by(word: word)}
-    if session[:location_id]
-      @location = Location.find(session[:location_id])
+    @location = if session[:location_id]
+      Location.find(session[:location_id])
     else
-      @location = Location.by_ip_address(request.location)
-      session[:location_id] = @location.id
+      Location.find_or_create_by_location_data(location_data)
     end
-    params[:distance] ? distance = params[:distance] : distance = 2
-    locations = @location.nearbys(distance)
+    session[:location_id] = @location.id
+
+    # location_data = Geocoder.search(params[:location][:zip_code]).first
+    # @location = Location.find_or_create_by(zip_code: location_data.postal_code)
+    # session[:location_id] = @location.id
+    feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
-    @feelings = assessments.map{|a| a.secondary_feelings}.flatten.uniq if feelings.first.ranking == 1
-    @feelings = assessments.map{|a| a.tertiary_feelings}.flatten.uniq if feelings.first.ranking == 2
-
-    @providers = Provider.match(assessments, locations)
-
+    @feelings = assessments.map{|a| a.feelings_by_rank(feelings.first.rank)}.flatten.uniq
+    locations = @location.find_within(params[:distance])
+    @providers = MatchMaker.new(assessments, locations).matches
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", layout: false),
@@ -28,13 +30,10 @@ class ProvidersController < ApplicationController
   end
 
   def create
+    location = Location.find_or_create_by(zip_code: params[:provider][:zip_code].to_i)
     competencies = params[:competency][0].keys
-    zip_code = params[:provider][:zip_code].to_i
-    location = Location.find_or_create_by(zip_code: zip_code)
     @provider = location.providers.new(provider_params)
-    binding.pry
     if @provider.save
-      binding.pry
       ProviderMailer.welcome_email(@provider).deliver
       competencies.each do |competency|
         assessment = Assessment.find_by(word: competency)
@@ -46,8 +45,8 @@ class ProvidersController < ApplicationController
     end
   end
 
-  private
-    def provider_params
-      params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
-    end
+private
+  def provider_params
+    params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
+  end
 end

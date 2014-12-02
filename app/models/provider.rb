@@ -8,15 +8,8 @@ class Provider < ActiveRecord::Base
   validates :name, :profile_url, :phone_number, presence: true
   # validates :profile_url, uniqueness: true
 
-  def self.match(assessments, locations)
-    providers_by_location = locations.map{|location| location.providers.to_a}
-    providers_by_location = providers_by_location.flatten.uniq
-    providers_by_assessment = providers_by_location.map do |provider|
-      matching_assessments = provider.assessments & assessments
-      provider if matching_assessments.count == assessments.count
-    end
-    providers_by_assessment.delete(nil)
-    providers_by_assessment[0..9]
+  def treatment_for?(provided_assessments)
+    (self.assessments & provided_assessments).count == provided_assessments.count
   end
 
   def distance_from(location)

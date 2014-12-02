@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @feelings = Feeling.where(ranking: 1)
+    @feelings = Feeling.where(rank: 1)
   end
 end
