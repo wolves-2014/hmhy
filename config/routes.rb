@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   post '/email_processor' => 'griddler/emails#create'
+  get '/email_processor' => 'welcome#index'
 
   resources :feelings, only: [:index, :show]
   resources :providers, only: [:index, :new, :create]
