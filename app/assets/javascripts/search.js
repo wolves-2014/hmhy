@@ -1,6 +1,22 @@
 var BeaconSearch = function() {
   this.feelings = [];
+  this.selectedFeeling = "";
 };
+
+BeaconSearch.prototype.remove = function(feeling) {
+  this.feelings.splice(this.feelings.indexOf(feeling), 1);
+}
+
+BeaconSearch.prototype.updateSelectedFeelings = function(feelingEl){
+  this.selectedFeeling = feelingEl.text();
+  if (feelingEl.hasClass('active')) {
+    feelingEl.removeClass('active');
+    search.remove(this.selectedFeeling);
+  } else {
+    feelingEl.removeClass('active');
+      search.feelings.push(this.selectedFeeling);
+  }
+}
 
 BeaconSearch.prototype.findProviders = function(callback) {
   return $.ajax({
@@ -18,21 +34,12 @@ $(document).ready (function(){
 
   $("#input-container").on('click', 'button', function(e) {
     e.preventDefault();
-    $(this).toggleClass('active');
-    var selected_feeling = $(this).text();
     var wordLevel = $('.word-container').attr('id');
-    var active = $('.active');
-
-    search.feelings = [];
-    for (var i = 0; i < active.length; i++) {
-      var feeling = $(active[i]).text();
-      search.feelings.push(feeling);
-    }
+    search.updateSelectedFeelings($(this))
 
     search.findProviders().done(function(response){
       providersView.render(response.providers_html);
       feelingsView.render(wordLevel, response.feelings_html);
-      feelingsView.updateHeader(selected_feeling);
 
     }).fail(function(response){
       console.log(response);
