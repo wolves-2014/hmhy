@@ -166,7 +166,8 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     unless valid_competencies == []
       valid_competencies.uniq.each do |competency|
         assessment = Assessment.find_by(word: competency)
-        new_provider.competencies.create!(assessment: assessment)
+        competency = new_provider.competencies.new(assessment: assessment)
+        competency.save(validate: false)
       end
     end
 
@@ -183,7 +184,8 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     unless valid_networks == []
       valid_networks.uniq.each do |network|
         insurance = Insurance.find_by(name: network)
-        new_provider.networks.create!(insurance: insurance)
+        network = new_provider.networks.new(insurance: insurance)
+        network.save(validate: false)
       end
     else
       new_provider.networks.create!(insurance: Insurance.find_by(name: "Out of Network") )
@@ -202,12 +204,13 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     unless valid_targets == []
       valid_targets.uniq.each do |target|
         age = Age.find_by(age_group: target)
-        new_provider.targets.create!(age: age)
+        target = new_provider.targets.new(age: age)
+        target.save(validate: false)
       end
     end
 
     counter += 1
-    puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 100 == 0
+    puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 1000 == 0
 
   end
 
