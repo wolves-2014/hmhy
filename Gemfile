@@ -38,6 +38,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'factory_girl'
 end
 
 gem 'heroku-deflater', group: :production
