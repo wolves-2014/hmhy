@@ -1,5 +1,6 @@
 class ProvidersController < ApplicationController
   include LocationsHelper
+  include FeelingsHelper
 
   def index
     @location = if session[:location_id]
@@ -13,15 +14,17 @@ class ProvidersController < ApplicationController
     # session[:location_id] = @location.id
     feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
-    @feelings = assessments.map{|assessment| assessment.feelings_by_rank(feelings.first.rank + 1)}.flatten.uniq
+    highest_rank = highest_rank_of_feelings(feelings)
+    @feelings = assessments.map{|assessment| assessment.feelings_by_rank(highest_rank + 1)}.flatten.uniq
     locations = @location.find_within(params[:distance])
     @providers = MatchMaker.new(assessments, locations).matches
-      respond_to do |format|
-      format.json {
-        render json: {providers_html: render_to_string("index.html.erb", layout: false),
-          feelings_html: render_to_string("feelings/_index.html.erb", layout: false)
-        }
+    respond_to do |format|
+    format.json {
+      render json: {providers_html: render_to_string("index.html.erb", layout: false),
+        feelings_html: render_to_string("feelings/_index.html.erb", layout: false),
+        highest_feeling_rank: highest_rank
       }
+    }
     end
   end
 
@@ -29,6 +32,11 @@ class ProvidersController < ApplicationController
   end
 
   def create
+    # @provider, result = Provider.register_new_provider(params)
+    # case result
+    # when :successfully_signed_up ...
+    # when :invalid_data_for_provider ...
+    # when :invalid_zip_code ...
     zip_code = params[:provider][:zip_code]
     if zip_code.length == 5
       location = Location.find_or_create_by(zip_code: zip_code.to_i)
@@ -55,5 +63,8 @@ class ProvidersController < ApplicationController
 private
   def provider_params
     params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
+  end
+  def highest_rank_of_feelings(feelings)
+    feelings.map(&:rank).max
   end
 end

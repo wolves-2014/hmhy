@@ -11,8 +11,7 @@ function FeelingsView(container, header) {
   this.header = header;
 }
 
-FeelingsView.prototype.render = function(feelingsHTML) {
-  var wordLevel = $('.word-container').attr('id');
+FeelingsView.prototype.render = function(wordLevel, feelingsHTML) {
   if (parseInt(wordLevel) < 3) {
     this.header.fadeOut('slow');
     this.container.fadeOut('slow', function(){
