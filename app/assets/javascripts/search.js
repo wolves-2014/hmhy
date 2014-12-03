@@ -27,5 +27,3 @@ BeaconSearch.prototype.findProviders = function(callback) {
 };
 
 var search = new BeaconSearch();
-
-
