@@ -9,8 +9,8 @@ Rails.application.configure do
     domain: "localhost",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV['MAIL_USER_NAME'],
-    password: ENV['MAIL_PASSWORD']
+    user_name: ENV['MANDRILL_USER_NAME'],
+    password: ENV['MANDRILL_PASSWORD']
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
