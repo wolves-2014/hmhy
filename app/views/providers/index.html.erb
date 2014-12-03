@@ -1,6 +1,6 @@
 <div class="container-fluid" id="results-container">
-  <div class="row">
-    <div class="col-sm-4" id="refine-search">
+  <div class="row" id="providers-results">
+    <div class="col-sm-4" id="search-box">
       <p>Refine your search:</p>
       <%= form_for :location, url: "/locations", html: {id: "search"} do |f| %>
         <p><%= f.text_field :zip_code, value: "", placeholder: "zip code" %><%= f.submit "Search" %></p>
@@ -24,11 +24,11 @@
           <option value="child">Child</option>
         </select>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-1">
     </div>
       <% end %>
     <div class="col-sm-4 text-center">
-      <h3 class="text-shadow2">We think these people may be able to help...</h3>
+      <h3 class="text-shadow2" id="providers-header">We think these people may be able to help...</h3>
     </div>
   </div>
   <% @providers.each do |provider| %>

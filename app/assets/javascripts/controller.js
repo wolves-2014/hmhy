@@ -8,10 +8,13 @@ $(document).ready (function(){
 
     search.findProviders().done(function(response){
       providersView.render(response.providers_html);
+      // search.setBox($('#search-box'));
       feelingsView.render(response.highest_feeling_rank, response.feelings_html);
+
 
     }).fail(function(response){
       console.log(response);
     });
   });
+
 });

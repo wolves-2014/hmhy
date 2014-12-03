@@ -28,7 +28,8 @@ FeelingsView.prototype.fade = function() {
 
 FeelingsView.prototype.updateHeader = function() {
   if (!this.header.hasClass('changed')) {
-    this.header.html("<h3 class='text-shadow no-top-margin'>You said you're feeling " + search.selectedFeeling + ".</h3><h2 class='text-shadow'>Do any of these apply to you?</h2>");
+    this.header.html("<h3 class='text-shadow no-top-margin'>You said you're feeling " + search.selectedFeeling + ". Anything else?</h3>");
     this.header.addClass('changed');
   }
 }
+

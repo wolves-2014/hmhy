@@ -16,10 +16,9 @@
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
-@import url(http://fonts.googleapis.com/css?family=Dosis:500)
 
 #input-container
-  height: 300px
+  min-height: 250px
   background: #05abe0
   background: -moz-linear-gradient(top,  #05abe0 0%, #53cbf1 50%, #87e0fd 100%)
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05abe0), color-stop(50%,#53cbf1), color-stop(100%,#87e0fd))
@@ -44,6 +43,7 @@
   border-radius: 10px
   box-shadow: 8px 8px 5px #83bf35
   border: 10px solid #fff9d3
+  top: -150px
 
 body
   color: #fffef1
@@ -98,19 +98,29 @@ img
 .text-shadow2
   text-shadow: 2px 2px 5px #215e10
 
-#refine-search
+#search-box
   margin-left: 5%
   padding: 1%
-  position: fixed
   width: 20%
   border-radius: 10px
   background-color: #fff9d3
   color: black
   box-shadow: 8px 8px 5px #83bf35
   border: 10px solid #fff9d3
-
+  top: 20px
 
 .btn-default
   color: #084ca0
   background-color: #ffffff
   border-color: #cccccc
+  margin-top: 30px
+
+.sticky
+  position: fixed
+  top: 10px
+
+#providers-header
+  position: relative
+
+#providers-results
+  display: block
