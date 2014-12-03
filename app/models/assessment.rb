@@ -16,7 +16,7 @@ class Assessment < ActiveRecord::Base
   end
 
   def feelings_by_rank(rank)
-    feelings = self.feelings.where(rank: rank)
+    self.feelings.where(rank: rank)
   end
 end
 
