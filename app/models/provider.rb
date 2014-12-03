@@ -2,6 +2,10 @@ class Provider < ActiveRecord::Base
   belongs_to :location
   has_many :competencies
   has_many :assessments, through: :competencies
+  has_many :networks
+  has_many :insurances, through: :networks
+  has_many :targets
+  has_many :ages, through: :targets
 
   attr_accessor :zip_code
 
