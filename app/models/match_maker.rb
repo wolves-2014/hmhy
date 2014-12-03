@@ -7,10 +7,13 @@ class MatchMaker
   end
 
   def providers_by_locations
+    #change method name to providers
     locations.map{|location| location.providers.to_a}.flatten.uniq
   end
 
   def matches
+    #providers_for_assessments?
+    # a.taken(n) to prevent looping through too many records
     providers_by_locations.select do |provider|
       provider.treatment_for?(assessments)
     end.first(10)

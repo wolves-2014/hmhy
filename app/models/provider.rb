@@ -13,6 +13,7 @@ class Provider < ActiveRecord::Base
   # validates :profile_url, uniqueness: true
 
   def treatment_for?(provided_assessments)
+    #self.assessments.where(id: provided_assessment.map{|p| id}).count
     (self.assessments & provided_assessments).count == provided_assessments.count
   end
 

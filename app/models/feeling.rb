@@ -5,6 +5,8 @@ class Feeling < ActiveRecord::Base
   validates :word, uniqueness: true, presence: true
 
   def self.find_by_word(feeling_words)
-    feeling_words.map{|word| Feeling.find_by(word: word)}
+    #potentially destroy...then hide the body in the icebox
+    Feeling.where(word: feeling_words)
+    # feeling_words.map{|word| Feeling.find_by(word: word)}
   end
 end

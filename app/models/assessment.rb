@@ -7,6 +7,7 @@ class Assessment < ActiveRecord::Base
   validates :word, uniqueness: true, presence: true
 
   def self.determine_prevalent(feelings)
+    #needs cleaning
     correlations = Hash[Assessment.all.map{|assessment| [assessment, 0]}]
     feelings.each do |feeling|
       feeling.assessments.each {|assessment| correlations[assessment] += feeling.rank }

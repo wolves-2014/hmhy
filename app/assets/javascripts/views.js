@@ -23,9 +23,6 @@ FeelingsView.prototype.render = function(wordLevel, feelingsHTML) {
   }
 }
 
-FeelingsView.prototype.fade = function() {
-}
-
 FeelingsView.prototype.updateHeader = function() {
   if (!this.header.hasClass('changed')) {
     this.header.html("<h3 class='text-shadow no-top-margin'>You said you're feeling " + search.selectedFeeling + ". Anything else?</h3>");

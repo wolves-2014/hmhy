@@ -1,7 +1,6 @@
 var BeaconSearch = function() {
   this.feelings = [];
   this.selectedFeeling = "";
-  this.box;
 };
 
 BeaconSearch.prototype.remove = function(feeling) {
@@ -14,8 +13,8 @@ BeaconSearch.prototype.updateSelectedFeelings = function(feelingEl){
     feelingEl.removeClass('active');
     search.remove(this.selectedFeeling);
   } else {
-    feelingEl.removeClass('active');
-      search.feelings.push(this.selectedFeeling);
+    feelingEl.addClass('active');
+    search.feelings.push(this.selectedFeeling);
   }
 }
 
