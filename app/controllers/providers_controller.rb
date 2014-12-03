@@ -1,6 +1,6 @@
 class ProvidersController < ApplicationController
   include LocationsHelper
-  include FeelingsHelper
+
 
   def index
     @location = if session[:location_id]
