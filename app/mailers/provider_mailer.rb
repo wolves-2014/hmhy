@@ -1,5 +1,5 @@
 class ProviderMailer < ActionMailer::Base
-  default from: "admin@beacon.com"
+  default from: "light-the-beacon.com"
 
   def welcome_email(provider)
     @provider = provider

@@ -1,7 +1,6 @@
 class ProvidersController < ApplicationController
   include LocationsHelper
 
-
   def index
     @location = if session[:location_id]
       Location.find(session[:location_id])
