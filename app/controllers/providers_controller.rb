@@ -29,18 +29,26 @@ class ProvidersController < ApplicationController
   end
 
   def create
-    location = Location.find_or_create_by(zip_code: params[:provider][:zip_code].to_i)
-    competencies = params[:competency][0].keys
-    @provider = location.providers.new(provider_params)
-    if @provider.save
-      ProviderMailer.welcome_email(@provider).deliver
-      competencies.each do |competency|
-        assessment = Assessment.find_by(word: competency)
-        @provider.competencies.create(assessment: assessment)
+    zip_code = params[:provider][:zip_code]
+    if zip_code.length == 5
+      location = Location.find_or_create_by(zip_code: zip_code.to_i)
+      competencies = params[:competency][0].keys
+      @provider = location.providers.new(provider_params)
+      if @provider.save
+        ProviderMailer.welcome_email(@provider).deliver
+        competencies.each do |competency|
+          assessment = Assessment.find_by(word: competency)
+          @provider.competencies.create(assessment: assessment)
+        end
+        flash[:notice] = "You have successfully signed up!!"
+        redirect_to root_path
+      else
+        render "new"
+        flash[:notice] = "Oops, something went wrong. Try again."
       end
-      redirect_to root_path
     else
       render "new"
+      flash[:notice] = "Must enter valid use zip code."
     end
   end
 
