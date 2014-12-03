@@ -1,6 +1,7 @@
 var BeaconSearch = function() {
   this.feelings = [];
   this.selectedFeeling = "";
+  this.box;
 };
 
 BeaconSearch.prototype.remove = function(feeling) {
@@ -25,5 +26,18 @@ BeaconSearch.prototype.findProviders = function(callback) {
     data: {feelings: this.feelings}
   });
 };
+
+// BeaconSearch.prototype.setBox = function (boxElement) {
+//   this.box = boxElement;
+//   var window = $(window);
+//   boxTop = this.box.offset().top;
+//   debugger;
+
+//   window.scroll(function() {
+//     this.box.toggleClass('sticky', window.scrollTop() > boxTop)
+//   })
+// }
+
+
 
 var search = new BeaconSearch();
