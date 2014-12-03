@@ -127,7 +127,6 @@ end
 def check_price_range(string)
   unless string.nil?
     min_max_array = string.scan(/\d{2,}/)
-    binding.pry
     min_max_array.count == 2 ? min_max_array : [min_max_array[0], min_max_array[0]]
   else
     return ["0","0"]
