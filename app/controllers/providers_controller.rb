@@ -13,10 +13,10 @@ class ProvidersController < ApplicationController
     # session[:location_id] = @location.id
     feelings = Feeling.find_by_word(params[:feelings])
     assessments = Assessment.determine_prevalent(feelings)
-    @feelings = assessments.map{|a| a.feelings_by_rank(feelings.first.rank)}.flatten.uniq
+    @feelings = assessments.map{|assessment| assessment.feelings_by_rank(feelings.first.rank + 1)}.flatten.uniq
     locations = @location.find_within(params[:distance])
     @providers = MatchMaker.new(assessments, locations).matches
-    respond_to do |format|
+      respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", layout: false),
           feelings_html: render_to_string("feelings/_index.html.erb", layout: false)
