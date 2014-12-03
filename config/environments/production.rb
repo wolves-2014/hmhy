@@ -1,12 +1,12 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "light-the-beacon.com" }
+  config.action_mailer.default_url_options = { host: "light-the-beacon" }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "smtp.mandrillapp.com",
     port: 587,
-    domain: "light-the-beacon.com",
+    domain: "light-the-beacon",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV['MANDRILL_USER_NAME'],
