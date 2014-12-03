@@ -1,6 +1,11 @@
 <%= render 'navbar', layout: false %>
 
 <div class="container-fluid" id="input-container">
+
+  <% if flash[:notice] %>
+        <div class="notice text-center"><%= flash[:notice] %></div>
+      <% end %>
+
   <div class="row">
     <div class="col-sm-4">
     </div>

@@ -8,6 +8,11 @@
     <div class="col-sm-1">
     </div>
     <div class="col-sm-5">
+
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+
       <%= form_for :provider, url: providers_path do |f| %>
         <div class="form-group">
           <%= f.label :name, "Name:" %>
@@ -19,7 +24,7 @@
         </div>
         <div class="form-group">
           <%= f.label :email, 'Email:' %>
-          <%= f.text_field :email, placeholder: "joeblow@example.com", class: 'form-control' %>
+          <%= f.text_field :email, class: 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :zip, 'Zip Code:' %>
