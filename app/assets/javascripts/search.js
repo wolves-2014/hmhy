@@ -1,4 +1,3 @@
-
 var BeaconSearch = function() {
   this.feelings = [];
 };
@@ -13,31 +12,9 @@ BeaconSearch.prototype.findProviders = function(callback) {
 
 var search = new BeaconSearch();
 
-function ProviderView(el) {
-  this.el;
-}
-
-ProvidersView.prototype.render = function(providersHTML) {
-  this.el.replaceWith(providersHTML);
-}
-
-function FeelingsView(el) {
-  this.el
-}
-
-FeelingsView.prototype.render = function(feelingsHTML) {
-  if (parseInt(wordLevel) < 3) {
-    this.el.replaceWith(feelingsHTML);
-    if (!$('#feeling-header').hasClass('changed')) {
-      $("#feeling-header").html("<h3 class='text-shadow'>You said you're feeling " + selected_feeling + ".</h3><h2 class='text-shadow'>Do any of these apply to you?</h2>");
-      $("#feeling-header").addClass('changed');
-    }
-  }
-}
-
 $(document).ready (function(){
-  var providersView = new ProvidersView($("#results-container"))
-  var feelingsView = new FeelingsView($(".word-container"))
+  var providersView = new ProvidersView($("#results-container"));
+  var feelingsView = new FeelingsView($(".word-container"), $("#feeling-header"));
 
   $("#input-container").on('click', 'button', function(e) {
     e.preventDefault();
@@ -54,7 +31,8 @@ $(document).ready (function(){
 
     search.findProviders().done(function(response){
       providersView.render(response.providers_html);
-      feelingsView.render(response.feelings_html);
+      feelingsView.render(wordLevel, response.feelings_html);
+      feelingsView.updateHeader(selected_feeling);
 
     }).fail(function(response){
       console.log(response);
