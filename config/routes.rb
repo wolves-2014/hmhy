@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   get '/about' => 'welcome#about'
-
+  mount_griddler
   resources :feelings, only: [:index, :show]
   resources :providers, only: [:index, :new, :create]
   resource :mailer, only: [:create]

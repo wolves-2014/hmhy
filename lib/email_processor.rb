@@ -3,8 +3,15 @@ class EmailProcessor
     @email = email
   end
 
-  def self.process
-    binding.pry
+  def process
+    #save a copy in our database for protection
+    params = {}
+    params[:message] = @email.raw_text
+    params[:subject] = @email.subject
+    params[:to] = @email.to[0][:email]
+
+    ProviderMailer.reply(params).deliver
+
     # all of your application-specific code here - creating models,
     # processing reports, etc
 
@@ -17,3 +24,5 @@ class EmailProcessor
     # )
   end
 end
+
+# curl -X POST http://localhost:3000/email_processor -d @sample_mandrill_email.json

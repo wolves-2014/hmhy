@@ -1,7 +1,11 @@
-"mandrill_events":[
-  {
-    "event": "inbound",
-    "ts": 1344498257
+mandrill_events=[
+{
+  "event": "inbound",
+  "msg": {
+    "from_email": "corey@example.com",
+    "to": [ [ "schreuderjo@gmail.com", "Jordan" ] ],
+    "subject": "hello",
+    "text": "Lorem Ipsum..."
   }
+}
 ]
-
