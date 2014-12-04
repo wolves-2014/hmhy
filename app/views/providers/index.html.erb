@@ -21,8 +21,7 @@
       <h3 class="text-shadow2" id="providers-header">We think these people may be able to help...</h3>
     </div>
   </div>
-  <% @providers.each do |provider| %>
-    <%= render partial: "show", layout: false, locals: {provider: provider, location: @location} %>
-  <% end %>
-
+  <%= render partial: "show",
+             collection: @providers, as: :provider,
+             locals: {location: @location} %>
 

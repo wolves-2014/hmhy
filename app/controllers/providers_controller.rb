@@ -4,26 +4,21 @@ class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings] || session[:feelings]
     session[:feelings] = feelings
-    search = if params[:refine_search]
-      ProviderSearch.new(feelings, params[:refine_search])
-    else
-      ProviderSearch.new(feelings)
-    end
 
+    search = ProviderSearch.new(feelings, params[:refine_search] || {})
     if session[:location_id]
-      if search.zip_code
-        @location = search.location_from_zip_code
+      @location = if search.zip_code
+        search.location_from_zip_code
       else
-        @location = Location.find(session[:location_id])
+        search.location = Location.find(session[:location_id])
       end
-      search.location = @location
     else
       search.zip_code = Location.find_zip_code_by_location_data(location_data)
       @location = search.location_from_zip_code
     end
     session[:location_id] = @location.id
 
-    @feelings = search.related_feelings
+    @feelings = search.next_ranks_feelings
     @providers = search.results
     respond_to do |format|
       format.json {
@@ -72,4 +67,12 @@ class ProvidersController < ApplicationController
     params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
   end
 
+  def location_data
+    # To avoid 0/0 lat/long from geocoding 127.0.0.1
+    if Rails.env.development?
+      Struct.new(:latitude, :longitude).new(41.85, -87.65)
+    else
+      request.location
+    end
+  end
 end

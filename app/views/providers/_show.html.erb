@@ -10,7 +10,7 @@
       </div>
       <div class="col-sm-6">
         <a href=<%=provider.profile_url%> target="_blank"><h3><%= provider.name %></h3></a>
-        <p><%= provider.distance_from(@location) %> miles away</p>
+        <p><%= provider.distance_from(location) %> miles away</p>
         <p><%= provider.phone_number %></p>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-providerid="<%=provider.id %>" data-providername="<%= provider.name %>">Contact</button>
       </div>

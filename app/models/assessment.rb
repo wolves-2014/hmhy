@@ -7,12 +7,12 @@ class Assessment < ActiveRecord::Base
   validates :word, uniqueness: true, presence: true
 
   def self.determine_prevalent(feelings)
-    correlations = Hash[Assessment.all.map{|assessment| [assessment, 0]}]
+    correlations = Hash.new(0)
     feelings.each do |feeling|
       feeling.assessments.each {|assessment| correlations[assessment] += feeling.rank }
     end
-    highest_value = correlations.values.max
-    correlations.select{|correlations, rank| rank == highest_value}.keys
+    highest_indicator = correlations.values.max
+    correlations.select{|correlations, indicator| indicator == highest_indicator}.keys
   end
 
   def feelings_by_rank(rank)
