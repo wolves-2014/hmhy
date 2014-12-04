@@ -5,7 +5,7 @@ class Provider < ActiveRecord::Base
   has_many :networks
   has_many :insurances, through: :networks
   has_many :targets
-  has_many :ages, through: :targets
+  has_many :age_groups, through: :targets
 
   attr_accessor :zip_code
 

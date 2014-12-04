@@ -3,7 +3,8 @@ function ProvidersView(container) {
 }
 
 ProvidersView.prototype.render = function(providersHTML) {
-  this.container.replaceWith(providersHTML);
+  this.container.html(providersHTML);
+
 }
 
 function FeelingsView(container, header) {

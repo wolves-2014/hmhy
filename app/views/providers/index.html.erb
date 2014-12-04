@@ -1,15 +1,14 @@
-<div class="container-fluid" id="results-container">
-  <div class="row" id="providers-results">
+  <div class="row" id="providers-results">    });
     <div class="col-sm-4" id="search-box">
       <p>Refine your search:</p>
-      <%= form_for :refine_search, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
+      <%= form_for :refine_search, remote: true, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
         <%= f.text_field :zip_code, value: "", placeholder: "zip code" %>
         <%= f.label 'Distance' %>
         <%= f.number_field(:distance, in: 1..200, step: 1)%>
         <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name) %>
         <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale %><br>
         <%= f.number_field(:max_price, in: 50..500, step: 50)%>
-        <%= f.select 'age_group_id', options_from_collection_for_select(Age.all, :id, :age_group) %>
+        <%= f.select 'generation_id', options_from_collection_for_select(AgeGroup.all, :id, :generation) %>
         <%= f.submit "Search" %>
       <% end %>
 
@@ -25,7 +24,5 @@
   <% @providers.each do |provider| %>
     <%= render partial: "show", layout: false, locals: {provider: provider, location: @location} %>
   <% end %>
-</div>
 
-<%= render "contact_form", layout: false %>
-<%= render "message_success", layout: false %>
+

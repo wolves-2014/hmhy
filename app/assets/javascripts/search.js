@@ -1,7 +1,6 @@
 var BeaconSearch = function() {
   this.feelings = [];
   this.selectedFeeling = "";
-  this.box;
 };
 
 BeaconSearch.prototype.remove = function(feeling) {

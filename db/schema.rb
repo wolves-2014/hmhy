@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20141202232922) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "ages", force: true do |t|
-    t.string   "age_group"
+  create_table "age_groups", force: true do |t|
+    t.string   "generation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20141202232922) do
 
   create_table "targets", force: true do |t|
     t.integer  "provider_id"
-    t.integer  "age_id"
+    t.integer  "age_group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
