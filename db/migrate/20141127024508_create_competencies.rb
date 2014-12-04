@@ -1,8 +1,8 @@
 class CreateCompetencies < ActiveRecord::Migration
   def change
     create_table :competencies do |t|
-      t.belongs_to :assessment
-      t.belongs_to :provider
+      t.belongs_to :assessment, index: true
+      t.belongs_to :provider, index: true
 
       t.timestamps
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204145822) do
+ActiveRecord::Schema.define(version: 20141202232922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,8 @@ ActiveRecord::Schema.define(version: 20141204145822) do
     t.datetime "updated_at"
   end
 
-  add_index "competencies", ["assessment_id", "provider_id"], name: "index_competencies_on_assessment_id_and_provider_id", using: :btree
+  add_index "competencies", ["assessment_id"], name: "index_competencies_on_assessment_id", using: :btree
+  add_index "competencies", ["provider_id"], name: "index_competencies_on_provider_id", using: :btree
 
   create_table "feelings", force: true do |t|
     t.string   "word"
@@ -50,6 +51,9 @@ ActiveRecord::Schema.define(version: 20141204145822) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "indications", ["assessment_id"], name: "index_indications_on_assessment_id", using: :btree
+  add_index "indications", ["feeling_id"], name: "index_indications_on_feeling_id", using: :btree
 
   create_table "insurances", force: true do |t|
     t.string   "name"
@@ -71,6 +75,9 @@ ActiveRecord::Schema.define(version: 20141204145822) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "networks", ["insurance_id"], name: "index_networks_on_insurance_id", using: :btree
+  add_index "networks", ["provider_id"], name: "index_networks_on_provider_id", using: :btree
 
   create_table "providers", force: true do |t|
     t.integer  "location_id"
@@ -95,5 +102,8 @@ ActiveRecord::Schema.define(version: 20141204145822) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "targets", ["age_group_id"], name: "index_targets_on_age_group_id", using: :btree
+  add_index "targets", ["provider_id"], name: "index_targets_on_provider_id", using: :btree
 
 end
