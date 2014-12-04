@@ -2,28 +2,32 @@ class ProvidersController < ApplicationController
   include LocationsHelper
 
   def index
+    feelings = params[:feelings] || session[:feelings]
+    if params[:refine_search]
+      search = ProviderSearch.new(feelings, params[:refine_search])
+    else
+      search = ProviderSearch.new(feelings)
+    end
+
     @location = if session[:location_id]
       Location.find(session[:location_id])
     else
-      Location.find_or_create_by_location_data(location_data)
+      search.zip_code = Location.find_zip_code_by_location_data(location_data)
+      search.location_from_zip_code
     end
     session[:location_id] = @location.id
-    # location_data = Geocoder.search(params[:location][:zip_code]).first
-    # @location = Location.find_or_create_by(zip_code: location_data.postal_code)
-    # session[:location_id] = @location.id
-    feelings = Feeling.find_by_word(params[:feelings])
-    assessments = Assessment.determine_prevalent(feelings)
-    highest_rank = highest_rank_of_feelings(feelings)
-    @feelings = assessments.map{|assessment| assessment.feelings_by_rank(highest_rank + 1)}.flatten.uniq
-    locations = @location.find_within(params[:distance])
-    @providers = MatchMaker.new(assessments, locations).matches
+    search.location = @location if search.location.nil?
+
+    @feelings = search.related_feelings
+    @providers = search.results
+
     respond_to do |format|
-    format.json {
-      render json: {providers_html: render_to_string("index.html.erb", layout: false),
-        feelings_html: render_to_string("feelings/_index.html.erb", layout: false),
-        highest_feeling_rank: highest_rank
+      format.json {
+        render json: {providers_html: render_to_string("index.html.erb", layout: false),
+          feelings_html: render_to_string("feelings/_index.html.erb", layout: false),
+          highest_feeling_rank: search.highest_rank
+        }
       }
-    }
     end
   end
 
@@ -59,11 +63,9 @@ class ProvidersController < ApplicationController
     end
   end
 
-private
+  private
   def provider_params
     params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
   end
-  def highest_rank_of_feelings(feelings)
-    feelings.map(&:rank).max
-  end
+
 end

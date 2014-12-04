@@ -133,9 +133,6 @@ def check_price_range(string)
   end
 end
 
-# Provider.where("min_price <= ?", [100])
-# Provider.where("min_price <= ?", [100]).map(&:min_price)
-
 @filename = "db/new_therapists.csv"
 counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
@@ -210,7 +207,7 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
 
     counter += 1
     puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 1000 == 0
-
+    break if counter == 1000
   end
 
 end
