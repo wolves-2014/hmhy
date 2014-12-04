@@ -1,5 +1,4 @@
 class Location < ActiveRecord::Base
-  DefaultLocation = Struct.new(:latitude, :longitude)
 
   has_many :providers
 
@@ -19,7 +18,7 @@ class Location < ActiveRecord::Base
   acts_as_copy_target
 
   def find_within(distance)
-    self.nearbys(distance ||= 5)
+    self.nearbys(distance ||= 2)
   end
 
   def self.find_zip_code_by_location_data(location_data)
@@ -29,9 +28,5 @@ class Location < ActiveRecord::Base
 
   def self.find_or_create_by_zip_code(zip_code)
     Location.find_or_create_by(zip_code: zip_code)
-  end
-
-  def self.default_development_location
-    DefaultLocation.new(41.85, -87.65)
   end
 end
