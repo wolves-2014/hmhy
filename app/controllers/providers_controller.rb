@@ -1,5 +1,4 @@
 class ProvidersController < ApplicationController
-  include LocationsHelper
 
   def index
     feelings = params[:feelings] || session[:feelings]
