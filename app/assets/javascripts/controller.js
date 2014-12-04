@@ -12,11 +12,9 @@ $(document).ready (function(){
     }).fail(function(response){
       console.log(response);
     });
-
-    $("#search-form").bind("ajax:success", function(e, data, status, xhr) {
-      debugger;
-      $("#new_post").append(xhr.responseText);
-    })
-
   });
+
+  $(document).on("ajax:success", "#search-form", function(e, data) {
+    providersView.render(data.providers_html);
+  })
 });
