@@ -7,7 +7,9 @@
         <%= f.number_field(:distance, in: 1..200, step: 1)%>
         <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name) %>
         <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale %><br>
-        <%= f.number_field(:max_price, in: 50..500, step: 50)%>
+        <%= f.label 'Maximum Price' %>
+        <%= f.number_field(:max_price, in: 50..500, step: 50)%><br>
+        <%= f.label 'Age Group' %>
         <%= f.select 'generation_id', options_from_collection_for_select(AgeGroup.all, :id, :generation) %>
         <%= f.submit "Search" %>
       <% end %>
