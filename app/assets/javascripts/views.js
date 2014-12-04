@@ -4,7 +4,6 @@ function ProvidersView(container) {
 
 ProvidersView.prototype.render = function(providersHTML) {
   this.container.html(providersHTML);
-
 }
 
 function FeelingsView(container, header) {
