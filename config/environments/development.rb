@@ -10,7 +10,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV['MANDRILL_USER_NAME'],
-    password: ENV['MANDRILL_PASSWORD']
+    password: ENV['MANDRILL_API_KEY']
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
