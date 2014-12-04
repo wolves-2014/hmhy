@@ -53,6 +53,6 @@ class ProviderSearch
     @providers = by_max_price if @max_price
     @providers = by_age_group if @age_group_id
     @providers = by_sliding_scale if @sliding_scale == 1
-    @providers = by_assessments
+    @providers = by_assessments.first(10)
   end
 end
