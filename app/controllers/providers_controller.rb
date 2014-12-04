@@ -3,23 +3,28 @@ class ProvidersController < ApplicationController
 
   def index
     feelings = params[:feelings] || session[:feelings]
+    session[:feelings] = feelings
     search = if params[:refine_search]
       ProviderSearch.new(feelings, params[:refine_search])
     else
       ProviderSearch.new(feelings)
     end
 
-    @location = if session[:location_id]
-      Location.find(session[:location_id])
+    if session[:location_id]
+      if search.zip_code
+        @location = search.location_from_zip_code
+      else
+        @location = Location.find(session[:location_id])
+        search.location = @location
+      end
     else
       search.zip_code = Location.find_zip_code_by_location_data(location_data)
-      search.location_from_zip_code
+      @location = search.location_from_zip_code
     end
     session[:location_id] = @location.id
-    search.location = @location if search.location.nil?
+
     @feelings = search.related_feelings
     @providers = search.results
-
     respond_to do |format|
       format.json {
         render json: {providers_html: render_to_string("index.html.erb", layout: false),

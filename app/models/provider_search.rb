@@ -23,15 +23,15 @@ class ProviderSearch
   end
 
   def by_insurance
-    @providers.select{|provider| provider.insurance_ids.include?(@insurance_id)}
+    @providers.select{|provider| provider.insurance_ids.include?(@insurance_id.to_i)}
   end
 
   def by_age_group
-    @providers.select{|provider| provider.age_ids.include?(@age_group_id)}
+    @providers.select{|provider| provider.age_group_ids.include?(@age_group_id.to_i)}
   end
 
   def by_max_price
-    @providers.select{|provider| provider.max_price <= @max_price}
+    @providers.select{|provider| provider.max_price <= @max_price.to_i}
   end
 
   def by_sliding_scale
@@ -44,7 +44,7 @@ class ProviderSearch
   end
 
   def by_assessments
-    @providers.select {|provider| provider.treatment_for?(@assessments)}
+    @providers.select{|provider| provider.treatment_for?(@assessments)}
   end
 
   def results
@@ -52,7 +52,7 @@ class ProviderSearch
     @providers = by_insurance if @insurance_id
     @providers = by_max_price if @max_price
     @providers = by_age_group if @age_group_id
-    @providers = by_sliding_scale if @sliding_scale
+    @providers = by_sliding_scale if @sliding_scale == 1
     @providers = by_assessments
   end
 end

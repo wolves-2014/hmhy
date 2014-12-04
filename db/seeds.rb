@@ -125,7 +125,7 @@ Insurance.create!(name: "Out of Network")
 ages = ["Adolescents / Teenagers (14 to 19)", "Adults", "Elders (65+)", "Children (6 to 10)", "Preteens / Tweens (11 to 13)", "Toddlers / Preschoolers (0 to 6)"]
 
 ages.each do |age|
-  Age.create!(age_group: age)
+  AgeGroup.create!(generation: age)
 end
 
 def check_price_range(string)
@@ -138,6 +138,7 @@ def check_price_range(string)
 end
 
 @filename = "db/new_therapists.csv"
+# @filename = "db/therapists_in_60000.csv"
 counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
   if location = Location.find_by(zip_code: line[:zip])
@@ -203,8 +204,8 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     end
     unless valid_targets == []
       valid_targets.uniq.each do |target|
-        age = Age.find_by(age_group: target)
-        target = new_provider.targets.new(age: age)
+        age_group = AgeGroup.find_by(generation: target)
+        target = new_provider.targets.new(age_group: age_group)
         target.save(validate: false)
       end
     end
