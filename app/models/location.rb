@@ -19,13 +19,16 @@ class Location < ActiveRecord::Base
   acts_as_copy_target
 
   def find_within(distance)
-    distance ||= 3
-    self.nearbys(distance)
+    self.nearbys(distance ||= 3)
   end
 
-  def self.find_or_create_by_location_data(location_data)
+  def self.find_zip_code_by_location_data(location_data)
     geocoder_response = Geocoder.search([location_data.latitude, location_data.longitude]).first
-    Location.find_or_create_by(zip_code: geocoder_response.postal_code)
+    geocoder_response.postal_code
+  end
+
+  def self.find_or_create_by_zip_code(zip_code)
+    Location.find_or_create_by(zip_code: zip_code)
   end
 
   def self.default_development_location

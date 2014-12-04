@@ -2,31 +2,22 @@
   <div class="row" id="providers-results">
     <div class="col-sm-4" id="search-box">
       <p>Refine your search:</p>
-      <%= form_for :location, url: "/locations", html: {id: "search"} do |f| %>
-        <p><%= f.text_field :zip_code, value: "", placeholder: "zip code" %><%= f.submit "Search" %></p>
-        <label>Insurance:</label>
-        <select name="age">
-          <option value="Aetna">Aetna</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select><br><br>
-        <label>Sliding Scale?</label>
-        <select name="sliding-scale">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select><br><br>
-        <label>Age:</label>
-        <select name="age">
-          <option value="adult">Adult</option>
-          <option value="senior">Senior</option>
-          <option value="teen">Teen</option>
-          <option value="child">Child</option>
-        </select>
+      <%= form_for :refine_search, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
+        <%= f.text_field :zip_code, value: "", placeholder: "zip code" %>
+        <%= f.label 'Distance' %>
+        <%= f.number_field(:distance, in: 1..200, step: 1)%>
+        <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name) %>
+        <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale %><br>
+        <%= f.number_field(:max_price, in: 50..500, step: 50)%>
+        <%= f.select 'age_group_id', options_from_collection_for_select(Age.all, :id, :age_group) %>
+        <%= f.submit "Search" %>
+      <% end %>
+
     </div>
     <div class="col-sm-1">
     </div>
-      <% end %>
+
+
     <div class="col-sm-4 text-center">
       <h3 class="text-shadow2" id="providers-header">We think these people may be able to help...</h3>
     </div>
