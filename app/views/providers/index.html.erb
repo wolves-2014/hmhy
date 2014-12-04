@@ -2,8 +2,8 @@
     <div class="col-sm-4" id="search-box">
       <p>Refine your search:</p>
       <%= form_for :refine_search, remote: true, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
-        <%= f.text_field :zip_code, value: "", placeholder: "zip code" %>
-        <%= f.label 'Distance' %>
+        <%= f.text_field :zip_code, value: "", placeholder: "zip code" %><br>
+        <%= f.label 'Search Radius (in miles)' %>
         <%= f.number_field(:distance, in: 1..200, step: 1)%>
         <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name) %>
         <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale %><br>
