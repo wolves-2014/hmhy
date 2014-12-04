@@ -5,9 +5,9 @@ Beacon
 Project Description
 ===========
 
-Have you or anyone close to you ever tried to find help from a mental health professional? If you have then you know how difficult it can be at times and that difficulty is compounded when someone could be dealing with a mental health problem.
+Have you ever tried to find help from a mental health professional? If so then you know how difficult it can be at times. That difficulty is compounded when you are struggling with your own issues.
 
-That is where 'Beacon' comes in. Our app provides and easy, clickable interface that asks users how they are feeling and immediately gives them results of mental health professionals in their area. Users can also refine their searches by different parameters such as zip code, distance, insurance, and specifying the age range that a professional specializes in.
+That is where 'Beacon' comes in. Our app provides an easy, clickable interface that asks users how they are feeling and immediately gives them results of mental health professionals in their area. Users can also refine their searches by different parameters such as zip code, distance, insurance, and specifying the age range that a professional specializes in.
 
 'Beacon' strives to make the road to better mental health extremely easy with as little frustration to the user as possible.
 
@@ -30,7 +30,7 @@ Simply visit the web page and start selecting how you feel from the different se
 
 As you click you will be provided with immediate results of mental health professionals in your area. The more you click, the more refined your search becomes.
 
-You can also utilize the refined search box on the left side of the page to add parameters to you search.
+You can also utilize the refined search box on the left side of the page to add parameters to your search.
 
 Installing 'Beacon'
 ===========
