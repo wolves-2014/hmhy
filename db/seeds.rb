@@ -6,6 +6,10 @@
 # #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 # #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
+require 'time'
+
+start_time = Time.now
+puts "Seeding start time: #{start_time}"
 
 primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "overwhelmed", "afraid"]
 
@@ -206,8 +210,10 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
     end
 
     counter += 1
-    puts "Creating entry for Psychology Today user: #{line[0]}" if counter % 1000 == 0
-    break if counter == 1000
+    if counter % 1000 == 0
+      elapsed_time = Time.now - start_time
+      puts "Creating entry for Psychology Today user: #{line[0]} | Time elapsed : #{(elapsed_time/60).floor} minutes and #{(elapsed_time%60).floor} seconds"
+    end
   end
 
 end
