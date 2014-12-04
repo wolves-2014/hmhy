@@ -5,6 +5,11 @@ class Feeling < ActiveRecord::Base
   validates :word, uniqueness: true, presence: true
 
   def self.find_by_word(feeling_words)
-    feeling_words.map{|word| Feeling.find_by(word: word)}
+    where(word: feeling_words)
   end
+
+  def self.top_level_feelings
+    where(rank: 1)
+  end
+
 end
