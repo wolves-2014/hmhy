@@ -1,8 +1,4 @@
-var providerData = function() {
-  this.id;
-}
-
-var provider = new providerData()
+var provider = {};
 
 $(document).ready (function(){
   $('body').on('show.bs.modal', '#contactModal', function (event) {

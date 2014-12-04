@@ -13,7 +13,7 @@ BeaconSearch.prototype.updateSelectedFeelings = function(feelingEl){
     feelingEl.removeClass('active');
     search.remove(this.selectedFeeling);
   } else {
-    feelingEl.removeClass('active');
+    feelingEl.addClass('active');
       search.feelings.push(this.selectedFeeling);
   }
 }

@@ -50,11 +50,11 @@ class ProvidersController < ApplicationController
       competencies = params[:competency][0].keys
       @provider = location.providers.new(provider_params)
       if @provider.save
-        ProviderMailer.welcome_email(@provider).deliver
         competencies.each do |competency|
           assessment = Assessment.find_by(word: competency)
           @provider.competencies.create(assessment: assessment)
         end
+        ProviderMailer.welcome_email(@provider).deliver
         flash[:notice] = "You have successfully signed up!!"
         redirect_to root_path
       else

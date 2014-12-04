@@ -13,7 +13,8 @@ class Provider < ActiveRecord::Base
   # validates :profile_url, uniqueness: true
 
   def treatment_for?(provided_assessments)
-    (self.assessments & provided_assessments).count == provided_assessments.count
+    assessment_ids = provided_assessments.map{|assessment| id}
+    self.assessments.where(id: assessment_ids).count
   end
 
   def distance_from(location)
