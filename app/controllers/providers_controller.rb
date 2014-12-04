@@ -3,10 +3,10 @@ class ProvidersController < ApplicationController
 
   def index
     feelings = params[:feelings] || session[:feelings]
-    if params[:refine_search]
-      search = ProviderSearch.new(feelings, params[:refine_search])
+    search = if params[:refine_search]
+      ProviderSearch.new(feelings, params[:refine_search])
     else
-      search = ProviderSearch.new(feelings)
+      ProviderSearch.new(feelings)
     end
 
     @location = if session[:location_id]
@@ -17,7 +17,6 @@ class ProvidersController < ApplicationController
     end
     session[:location_id] = @location.id
     search.location = @location if search.location.nil?
-
     @feelings = search.related_feelings
     @providers = search.results
 
