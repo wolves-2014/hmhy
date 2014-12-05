@@ -11,6 +11,5 @@ CSV.readlines(@filename).each do |line|
     puts insurance_array
   end
 end
-binding.pry
 all_insurances.flatten!.compact!.uniq!
 puts all_insurances

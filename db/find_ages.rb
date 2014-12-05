@@ -10,6 +10,5 @@ CSV.readlines(@filename).each do |line|
     all_ages << age_array
   end
 end
-binding.pry
 all_ages.flatten!.compact!.uniq!
 puts all_ages
