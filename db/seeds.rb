@@ -137,12 +137,14 @@ def check_price_range(string)
   end
 end
 
+
 # @filename = "db/new_therapists.csv"
 @filename = "db/therapists_in_60000.csv"
 counter = 0
 CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |line|
   if location = Location.find_by(zip_code: line[:zip])
     price_range_array = check_price_range(line[:price_range])
+    binding.pry
     new_provider = location.providers.new(
       title: line[:title],
       name: line[:name],

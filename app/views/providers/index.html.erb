@@ -1,6 +1,6 @@
   <div class="row" id="providers-results">
     <div class="col-sm-4" id="search-box">
-      <p>Refine your search:</p>
+      <h4>Refine your search:</h4>
       <%= form_for :refine_search, remote: true, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
         <%= f.text_field :zip_code, value: "", placeholder: "zip code" %><br>
         <%= f.label 'Search Radius (in miles)' %>
