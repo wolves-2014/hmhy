@@ -7,7 +7,7 @@ class Provider < ActiveRecord::Base
   has_many :targets
   has_many :age_groups, through: :targets
 
-  attr_accessor :zip_code
+  attr_accessor :zip_code, :distance
 
   validates :name, :profile_url, :phone_number, presence: true
   # validates :profile_url, uniqueness: true
@@ -18,7 +18,7 @@ class Provider < ActiveRecord::Base
   end
 
   def distance_from(location)
-    distance = self.location.distance_from(location)
-    (distance * 10).round / 10.0
+    @distance ||= self.location.distance_from(location)
+    (@distance * 10).round / 10.0
   end
 end
