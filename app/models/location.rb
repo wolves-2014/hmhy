@@ -18,7 +18,7 @@ class Location < ActiveRecord::Base
   acts_as_copy_target
 
   def find_within(distance)
-    self.nearbys(distance ||= 2)
+    self.nearbys(distance ||= 5)
   end
 
   def self.find_zip_code_by_location_data(location_data)
