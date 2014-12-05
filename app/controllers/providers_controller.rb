@@ -11,7 +11,7 @@ class ProvidersController < ApplicationController
         search.location = Location.find(session[:location_id])
       end
     else
-      search.zip_code = Location.find_zip_code_by_location_data(request.location)
+      search.zip_code = Location.find_zip_code_by_location_data(location_data)
       @location = search.location_from_zip_code
     end
     session[:location_id] = @location.id
@@ -65,12 +65,12 @@ class ProvidersController < ApplicationController
     params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
   end
 
-  # def location_data
+  def location_data
     # To avoid 0/0 lat/long from geocoding 127.0.0.1
     # if Rails.env.development?
-    #   Struct.new(:latitude, :longitude).new(41.85, -87.65)
+      Struct.new(:latitude, :longitude).new(41.85, -87.65)
     # else
-
+    #   request.lcation
     # end
-  # end
+  end
 end
