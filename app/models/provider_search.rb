@@ -63,6 +63,6 @@ class ProviderSearch
     providers = filter_by_max_price(providers) if @max_price
     providers = filter_by_age_group(providers) if @age_group_id
     providers = filter_by_sliding_scale(providers) if @sliding_scale == 1
-    providers = filter_by_assessments(providers)
+    providers = filter_by_assessments(providers).first(10)
   end
 end

@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-sm-4">
   </div>
-  <div class="col-sm-4" id="result-partial-container">
+  <div class="col-sm-5" id="result-partial-container">
     <div class="row">
       <div class="col-sm-3">
         <a href="<%=provider.profile_url%>" target="_blank"><img src=<%= provider.photo_url %> class="img-rounded"/></a>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-1">
       </div>
       <div class="col-sm-6">
         <a href=<%=provider.profile_url%> target="_blank"><h3><%= provider.name %></h3></a>
+        <h4><%= provider.phone_number %></h4>
         <p><%= provider.distance_from(location) %> miles away</p>
-        <p><%= provider.phone_number %></p>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-providerid="<%=provider.id %>" data-providername="<%= provider.name %>">Contact</button>
       </div>
     </div>
