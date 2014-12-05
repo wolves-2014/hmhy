@@ -11,7 +11,6 @@ class ProvidersController < ApplicationController
         search.location = Location.find(session[:location_id])
       end
     else
-      request.location
       search.zip_code = Location.find_zip_code_by_location_data(request.location)
       @location = search.location_from_zip_code
     end
