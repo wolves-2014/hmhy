@@ -67,10 +67,10 @@ class ProvidersController < ApplicationController
 
   def location_data
     # To avoid 0/0 lat/long from geocoding 127.0.0.1
-    if Rails.env.development?
-      Struct.new(:latitude, :longitude).new(41.85, -87.65)
-    else
+    # if Rails.env.development?
+    #   Struct.new(:latitude, :longitude).new(41.85, -87.65)
+    # else
       request.location
-    end
+    # end
   end
 end
