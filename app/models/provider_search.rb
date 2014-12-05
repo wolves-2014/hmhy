@@ -54,8 +54,16 @@ class ProviderSearch
 
   def filter_by_assessments(providers)
     provider_ids_linked_for_assessments = Competency.where(provider_id: providers.map(&:id)).where(assessment_id: assessments.map(&:id)).map(&:provider_id)
-
     providers.select{|provider| provider_ids_linked_for_assessments.include?(provider.id)}
+  end
+
+  def select_by_distance(providers)
+    providers_by_location = {}
+    providers.each do |provider|
+      providers_by_location[provider] = provider.distance_from(location)
+    end
+    # include distance in result
+    providers_by_location.sort_by{|provider, distance| distance}.map(&:first)
   end
 
   def results
@@ -63,6 +71,7 @@ class ProviderSearch
     providers = filter_by_max_price(providers) if @max_price
     providers = filter_by_age_group(providers) if @age_group_id
     providers = filter_by_sliding_scale(providers) if @sliding_scale == 1
-    providers = filter_by_assessments(providers).first(10)
+    providers = filter_by_assessments(providers)
+    providers = select_by_distance(providers).first(10)
   end
 end
