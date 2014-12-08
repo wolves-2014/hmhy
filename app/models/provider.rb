@@ -21,4 +21,8 @@ class Provider < ActiveRecord::Base
     @distance ||= self.location.distance_from(location)
     (@distance * 10).round / 10.0
   end
+
+  def find_at_locations(locations)
+    where(location_id: locations.map(&:id)).includes(:location)
+  end
 end

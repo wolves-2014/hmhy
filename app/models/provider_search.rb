@@ -13,7 +13,7 @@ class ProviderSearch
   end
 
   def feelings
-    @feelings ||= Feeling.where(word: @feelings_as_words).includes(:assessments)
+    @feelings ||= Feeling.find_by_words(@feelings_as_words)
   end
 
   def assessments
@@ -25,10 +25,7 @@ class ProviderSearch
   end
 
   def next_ranks_feelings
-    @highest_rank = feelings.map(&:rank).max
-    # Feeling.for_assessments_and_rank(assessments, @highest_rank+1)
-    assessment_ids = assessments.map(&:id)
-    Feeling.joins(:indications).where("indications.assessment_id IN (?) and feelings.rank = ?", assessment_ids, @highest_rank+1).uniq
+    Feeling.next_rank(feelings, assessments)
   end
 
   def filter_by_insurance(providers)
@@ -49,12 +46,12 @@ class ProviderSearch
 
   def by_location(location)
     locations = location.find_within(@distance)
-    Provider.where(location_id: locations.map(&:id)).includes(:location)
+    Provider.find_at_locations(locations)
   end
 
   def filter_by_assessments(providers)
-    provider_ids_linked_for_assessments = Competency.where(provider_id: providers.map(&:id)).where(assessment_id: assessments.map(&:id)).map(&:provider_id)
-    providers.select{|provider| provider_ids_linked_for_assessments.include?(provider.id)}
+    provider_ids = Competency.provider_ids_linked_for_assessments(providers, assessments)
+    providers.select{|provider| provider_ids.include?(provider.id)}
   end
 
   def select_by_distance(providers)

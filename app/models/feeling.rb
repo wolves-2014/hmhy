@@ -4,12 +4,18 @@ class Feeling < ActiveRecord::Base
 
   validates :word, uniqueness: true, presence: true
 
-  def self.find_by_word(feeling_words)
-    where(word: feeling_words)
-  end
-
   def self.top_level_feelings
     where(rank: 1)
+  end
+
+  def self.next_ranks(feelings, assessments)
+  	highest_rank = feelings.map(&:rank).max
+  	assessment_ids = assessments.map(&:id)
+  	joins(:indications).where("indications.assessment_id IN (?) and feelings.rank = ?", assessment_ids, highest_rank+1).uniq
+  end
+
+  def self.find_by_words(feelings_as_words)
+  	where(word: feelings_as_words).includes(:assessments)
   end
 
 end

@@ -17,6 +17,7 @@ class ProvidersController < ApplicationController
     session[:location_id] = @location.id
 
     @feelings = search.next_ranks_feelings
+    # @feelings = search.next_ranks_feelings
     @providers = search.results
     respond_to do |format|
       format.json {
