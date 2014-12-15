@@ -8,9 +8,7 @@ class Feeling < ActiveRecord::Base
     where(rank: 1)
   end
 
-  def self.next_ranks(feelings, assessments)
-  	highest_rank = feelings.map(&:rank).max
-  	assessment_ids = assessments.map(&:id)
+  def self.next_rank(highest_rank, assessment_ids)
   	joins(:indications).where("indications.assessment_id IN (?) and feelings.rank = ?", assessment_ids, highest_rank+1).uniq
   end
 

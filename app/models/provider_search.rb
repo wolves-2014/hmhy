@@ -25,7 +25,9 @@ class ProviderSearch
   end
 
   def next_ranks_feelings
-    Feeling.next_rank(feelings, assessments)
+    @highest_rank = feelings.map(&:rank).max
+    assessment_ids = assessments.map(&:id)
+    Feeling.next_rank(@highest_rank, assessment_ids)
   end
 
   def filter_by_insurance(providers)
@@ -46,7 +48,7 @@ class ProviderSearch
 
   def by_location(location)
     locations = location.find_within(@distance)
-    Provider.find_at_locations(locations)
+    Provider.find_for_locations(locations)
   end
 
   def filter_by_assessments(providers)
