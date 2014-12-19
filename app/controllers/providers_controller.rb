@@ -11,7 +11,7 @@ class ProvidersController < ApplicationController
         search.location = Location.find(session[:location_id])
       end
     else
-      search.zip_code = Location.find_zip_code_by_location_data(location_data)
+      search.zip_code = "60606" #Location.find_zip_code_by_location_data(location_data)
       @location = search.location_from_zip_code
     end
     session[:location_id] = @location.id
@@ -32,45 +32,45 @@ class ProvidersController < ApplicationController
   end
 
   def create
-    # @provider, result = Provider.register_new_provider(params)
-    # case result
+    @provider, result = Provider.register_new(provider_params)
+    # case results
     # when :successfully_signed_up ...
     # when :invalid_data_for_provider ...
     # when :invalid_zip_code ...
-    zip_code = params[:provider][:zip_code]
-    if zip_code.length == 5
-      location = Location.find_or_create_by(zip_code: zip_code.to_i)
-      competencies = params[:competency][0].keys
-      @provider = location.providers.new(provider_params)
-      if @provider.save
-        competencies.each do |competency|
-          assessment = Assessment.find_by(word: competency)
-          @provider.competencies.create(assessment: assessment)
-        end
-        ProviderMailer.welcome_email(@provider).deliver
-        flash[:notice] = "You have successfully signed up!!"
-        redirect_to root_path
-      else
-        render "new"
-        flash[:notice] = "Oops, something went wrong. Try again."
-      end
-    else
-      render "new"
-      flash[:notice] = "Must enter valid use zip code."
-    end
+    # zip_code = params[:provider][:zip_code]
+    # if zip_code.length == 5
+    #   location = Location.find_or_create_by(zip_code: zip_code.to_i)
+    #   competencies = params[:competency][0].keys
+    #   @provider = location.providers.new(provider_params)
+    #   if @provider.save
+    #     competencies.each do |competency|
+    #       assessment = Assessment.find_by(word: competency)
+    #       @provider.competencies.create(assessment: assessment)
+    #     end
+    #     ProviderMailer.welcome_email(@provider).deliver
+    #     flash[:notice] = "You have successfully signed up!!"
+    #     redirect_to root_path
+    #   else
+    #     render "new"
+    #     flash[:notice] = "Oops, something went wrong. Try again."
+    #   end
+    # else
+    #   render "new"
+    #   flash[:notice] = "Must enter valid use zip code."
+    # end
   end
 
   private
   def provider_params
-    params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title)
+    params.require(:provider).permit(:name, :email, :photo_url, :profile_url, :phone_number, :title, :zip_code)
   end
 
   def location_data
     # To avoid 0/0 lat/long from geocoding 127.0.0.1
-    if Rails.env.development?
+    # if Rails.env.development?
       Struct.new(:latitude, :longitude).new(41.85, -87.65)
-    else
-      request.location
-    end
+    # else
+    #   request.location
+    # end
   end
 end
