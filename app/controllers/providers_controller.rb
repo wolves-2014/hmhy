@@ -3,6 +3,15 @@ class ProvidersController < ApplicationController
   def index
     feelings = params[:feelings] || session[:feelings]
     session[:feelings] = feelings
+    if params[:refine_search].nil?
+      params[:refine_search] = { "zip_code"=>"60606",
+                                 "distance"=>"5",
+                                 "insurance_id"=>"",
+                                 "sliding_scale"=>"",
+                                 "max_price"=>"120",
+                                 "age_group_id"=>"2"}
+    end
+    # params[:refine_search] =
     search = ProviderSearch.new(feelings, params[:refine_search] || {})
     if session[:location_id]
       @location = if search.zip_code

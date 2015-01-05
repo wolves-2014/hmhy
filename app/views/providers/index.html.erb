@@ -4,13 +4,13 @@
       <%= form_for :refine_search, remote: true, url: "/providers", html: { method: 'GET', id: "search-form"} do |f| %>
         <%= f.text_field :zip_code, value: Location.find(session[:location_id]).zip_code, placeholder: "zip code" %><br>
         <%= f.label 'Search Radius (in miles)' %>
-        <%= f.number_field(:distance, in: 1..200, step: 1, value: "3")%>
-        <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name), {prompt: 'Select Insurance'} %>
-        <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale %><br>
+        <%= f.number_field(:distance, in: 1..200, step: 1, value: params[:refine_search][:distance])%>
+        <br><%= f.label 'Insurance' %><%= f.select 'insurance_id', options_from_collection_for_select(Insurance.all, :id, :name, params[:refine_search][:insurance_id]), {prompt: 'Select Insurance'} %>
+        <%= f.label 'Sliding Scale?' %> <%= f.check_box :sliding_scale, {checked: if params[:refine_search][:sliding_scale] == "1" then true end}  %><br>
         <%= f.label 'Maximum Price' %>
-        <%= f.number_field(:max_price, in: 50..500, step: 10, value: "120")%>
+        <%= f.number_field(:max_price, in: 50..500, step: 10, value: params[:refine_search][:max_price])%><br>
         <%= f.label 'Age Group' %>
-        <%= f.select 'generation_id', options_from_collection_for_select(AgeGroup.all, :id, :generation), {prompt: 'Select Age Group'}  %>
+        <%= f.select 'age_group_id', options_from_collection_for_select(AgeGroup.all, :id, :generation, params[:refine_search][:age_group_id]), {prompt: 'Select Age Group'}  %>
         <%= f.submit "Search" %>
       <% end %>
 
