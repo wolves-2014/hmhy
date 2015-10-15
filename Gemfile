@@ -34,14 +34,15 @@ end
 
 group :development, :test do
   gem 'brice'
-  gem 'capybara'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry'
   gem 'pry-nav'
 end
 
 group :test do
+  gem 'capybara'
+  gem 'poltergeist'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'shoulda-matchers', require: false
