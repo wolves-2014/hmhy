@@ -1,0 +1,81 @@
+addiction:
+  primary:
+    - "afraid"
+    - "ashamed"
+    - "inadequate"
+    - "overwhelmed"
+    - "unfocused"
+  secondary:
+    - "guilty"
+    - "not sleeping enough"
+    - "sleeping too much"
+    - "strained relationships"
+  tertiary:
+    - "like I'm a slave to something"
+    - "lost someone important"
+adhd:
+  primary:
+    - "unfocused"
+  secondary:
+    - "avoiding complicated tasks"
+    - "restless"
+  tertiary:
+    - "easily distracted"
+    - "forgetful"
+    - "often losing things"
+    - "tense"
+anxiety:
+  primary:
+    - "afraid"
+    - "stuck"
+    - "tired"
+    - "unfocused"
+  secondary:
+    - "not sleeping enough"
+    - "restless"
+  tertiary:
+    - "edgy"
+    - "irritable"
+    - "numb"
+eating_disorders:
+  primary:
+    - "ashamed"
+    - "inadequate"
+    - "stuck"
+    - "tired"
+  secondary:
+    - "guilty"
+    - "no appetite"
+    - "strained relationships"
+  tertiary:
+    - "disliking own body"
+    - "exercising too much"
+    - "losing control when eating"
+    - "making careless mistakes"
+    - "thinking about weight too much"
+depression:
+  primary:
+    - "afraid"
+    - "ashamed"
+    - "inadequate"
+    - "overwhelmed"
+    - "stuck"
+    - "tired"
+    - "unfocused"
+  secondary:
+    - "avoiding complicated tasks"
+    - "no appetite"
+    - "sleeping too much"
+  tertiary:
+    - "feeling hopeless"
+    - "indecisive"
+    - "numb"
+    - "often think about death"
+grief:
+  primary:
+    - "afraid"
+    - "tired"
+  secondary:
+    - "sleeping too much"
+  tertiary:
+    - "dieting too much"
