@@ -1,36 +1,23 @@
-class FeelingsBuilder
-  attr_reader :assessment_data
-  attr_accessor :feelings_attributes
-
+FeelingsBuilder = Struct.new(:assessment_data) do
   TYPE_AND_RANK = {
     primary:   1,
     secondary: 2,
     tertiary:  3
   }.freeze
 
-  def initialize(assessment_data)
-    @assessment_data = assessment_data
-    @feelings_attributes = []
-  end
-
-  def generate_attributes
-    TYPE_AND_RANK.each do |type, rank|
-      assessment_data[type].each do |feeling|
-        feelings_attributes << feeling_attributes(feeling, rank)
-      end
-    end
-  end
-
   def feelings
-    feelings_attributes.map { |attributes| Feeling.new(attributes) }
+    feelings_attributes.map do |attributes|
+      Feeling.find_or_create_by(attributes)
+    end
   end
 
   private
 
-  def feeling_attributes(feeling, rank)
-    {
-      word: feeling,
-      rank: rank
-    }
+  def feelings_attributes
+    TYPE_AND_RANK.map { |type, rank| feelings_for_type(type, rank) }.flatten
+  end
+
+  def feelings_for_type(type, rank)
+    assessment_data[type].map { |feeling| { word: feeling, rank: rank } }
   end
 end
