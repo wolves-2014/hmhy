@@ -11,7 +11,6 @@ end
 
 # FORMER SEED FILE AND DATA BELOW
 =begin
->>>>>>> 07d1829... Simplify assessment.
 require 'csv'
 require 'time'
 
@@ -226,3 +225,4 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
   end
 
 end
+=end
