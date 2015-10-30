@@ -1,10 +1,17 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-# #
-# # Examples:
-# #
-# #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-# #   Mayor.create(name: 'Emanuel', city: cities.first)
+seed_data = {}
+Dir[Rails.root.join('config/data/**/*.yml')].each do |file|
+  # Capture only the file name without extension
+  key = file.gsub /(\A.*(config\/data\/)|\.yml\z)/, ''
+  seed_data[key.to_sym] = YAML::load_file(file)
+end
+
+seed_data[:assessments].each do |assessment, indications|
+  AssessmentBuilder.new(assessment, indications.symbolize_keys).assessment
+end
+
+# FORMER SEED FILE AND DATA BELOW
+=begin
+>>>>>>> 07d1829... Simplify assessment.
 require 'csv'
 require 'time'
 
