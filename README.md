@@ -19,7 +19,7 @@ Under the Hood
 'Beacon' runs on RAILS under the hood and has utilized Nokogiri to create databases, Mandrill for email communication with providers, and JavaScript/jQuery to provide an easy to use, single page user experience.
 
 Schema:
-![schema](/db/schema.png)
+![schema](/db/doc/schema.png)
 
 Using the Web App
 ===========
