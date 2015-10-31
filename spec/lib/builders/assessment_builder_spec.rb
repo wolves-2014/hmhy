@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe AssessmentBuilder, type: :model do
-  let(:primary_feeling_words) { %w(boo bah baah) }
-  let(:secondary_feeling_words) { %w(groomed helpful cheeky) }
-  let(:tertiary_feeling_words) { %w(different awesome okay) }
-
   let(:indications) do
     {
       primary: primary_feeling_words,
@@ -13,7 +9,7 @@ RSpec.describe AssessmentBuilder, type: :model do
     }
   end
 
-  let(:subject) { described_class.new('anxiety', indications) }
+  subject(:assessment_builder) { described_class.new('anxiety', indications) }
 
   describe '#assessment' do
     let(:assessment) { subject.assessment }
