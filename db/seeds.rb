@@ -1,131 +1,40 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-# #
-# # Examples:
-# #
-# #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-# #   Mayor.create(name: 'Emanuel', city: cities.first)
+seed_data = {}
+Dir[Rails.root.join('config/data/**/*.yml')].each do |file|
+  # Capture only the file name without extension
+  key = file.gsub /(\A.*(config\/data\/)|\.yml\z)/, ''
+  seed_data[key.to_sym] = YAML::load_file(file)
+end
+
+seed_data[:assessments].each do |assessment, indications|
+  AssessmentBuilder.new(assessment, indications.symbolize_keys).assessment
+end
+
+therapist_data = seed_data[:therapists].deep_symbolize_keys
+
+therapist_data[:age_groups].each do |age_group|
+  AgeGroup.create!(generation: age_group)
+end
+
+therapist_data[:insurance_companies].each do |name|
+  Insurance.create!(name: name)
+end
+
+# Default to this value when insurance cannot be matched.
+Insurance.create!(name: 'Out of network')
+
+# FORMER SEED FILE AND DATA BELOW
+=begin
 require 'csv'
-require 'time'
 
 start_time = Time.now
 puts "Seeding start time: #{start_time}"
-
-primary_feelings = ["tired", "unfocused", "ashamed", "inadequate", "stuck", "overwhelmed", "afraid"]
-
-secondary_feelings = ["sleeping too much", "not sleeping enough", "no appetite", "avoiding complicated tasks",
-                      "guilty", "restless", "strained relationships"]
-tertiary_feelings =["feeling hopeless", "indecisive", "often think about death", "numb", "irritable", "edgy", "tense", "easily distracted", "forgetful",
-                    "often losing things", "making careless mistakes", "losing control when eating", "disliking own body",
-                     "thinking about weight too much", "exercising too much", "dieting too much", "lost someone important",
-                     "like I'm a slave to something", "wasting time on chasing something"]
-
-primary_feeling_objects = primary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, rank: 1)
-end
-
-secondary_feeling_objects = secondary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, rank: 2)
-end
-
-tertiary_feeling_objects = tertiary_feelings.map do | feeling |
-  Feeling.create!(word: feeling, rank: 3)
-end
-
-assessments = ["depression", "addiction", "adhd", "eating disorders", "grief", "anxiety"]
-
-assessments.map!{|assessment| Assessment.create!(word: assessment)}
-
-assessments[0].indications.create!(
-  [{feeling: primary_feeling_objects[0]},
-  {feeling: primary_feeling_objects[1]},
-  {feeling: primary_feeling_objects[2]},
-  {feeling: primary_feeling_objects[3]},
-  {feeling: primary_feeling_objects[4]},
-  {feeling: primary_feeling_objects[5]},
-  {feeling: primary_feeling_objects[6]},
-  {feeling: secondary_feeling_objects[0]},
-  {feeling: secondary_feeling_objects[2]},
-  {feeling: secondary_feeling_objects[3]},
-  {feeling: tertiary_feeling_objects[0]},
-  {feeling: tertiary_feeling_objects[1]},
-  {feeling: tertiary_feeling_objects[2]},
-  {feeling: tertiary_feeling_objects[3]}]
-  )
-
-assessments[1].indications.create!(
-  [{feeling:primary_feeling_objects[1]},
-  {feeling: primary_feeling_objects[2]},
-  {feeling: primary_feeling_objects[3]},
-  {feeling: primary_feeling_objects[5]},
-  {feeling: primary_feeling_objects[6]},
-  {feeling: secondary_feeling_objects[0]},
-  {feeling: secondary_feeling_objects[1]},
-  {feeling: secondary_feeling_objects[4]},
-  {feeling: secondary_feeling_objects[6]},
-  {feeling: tertiary_feeling_objects[17]},
-  {feeling: tertiary_feeling_objects[18]}]
-  )
-
-assessments[2].indications.create!(
-  [{feeling: primary_feeling_objects[1]},
-  {feeling: secondary_feeling_objects[3]},
-  {feeling: secondary_feeling_objects[5]},
-  {feeling: tertiary_feeling_objects[7]},
-  {feeling: tertiary_feeling_objects[8]},
-  {feeling: tertiary_feeling_objects[9]},
-  {feeling: tertiary_feeling_objects[10]}]
-  )
-
-assessments[3].indications.create!(
-  [{feeling: primary_feeling_objects[0]},
-  {feeling: primary_feeling_objects[2]},
-  {feeling: primary_feeling_objects[3]},
-  {feeling: primary_feeling_objects[4]},
-  {feeling: secondary_feeling_objects[2]},
-  {feeling: secondary_feeling_objects[4]},
-  {feeling: secondary_feeling_objects[6]},
-  {feeling: tertiary_feeling_objects[11]},
-  {feeling: tertiary_feeling_objects[12]},
-  {feeling: tertiary_feeling_objects[13]},
-  {feeling: tertiary_feeling_objects[14]},
-  {feeling: tertiary_feeling_objects[15]}]
-  )
-
-assessments[4].indications.create!(
-  [{feeling: primary_feeling_objects[0]},
-  {feeling: primary_feeling_objects[6]},
-  {feeling: secondary_feeling_objects[0]},
-  {feeling: tertiary_feeling_objects[16]}]
-  )
-
-assessments[5].indications.create!(
-  [{feeling: primary_feeling_objects[0]},
-  {feeling: primary_feeling_objects[1]},
-  {feeling: primary_feeling_objects[4]},
-  {feeling: primary_feeling_objects[6]},
-  {feeling: secondary_feeling_objects[1]},
-  {feeling: secondary_feeling_objects[5]},
-  {feeling: tertiary_feeling_objects[4]},
-  {feeling: tertiary_feeling_objects[5]},
-  {feeling: tertiary_feeling_objects[6]}]
-  )
 
 Location.copy_from 'db/us_postal_codes.csv'
 
 locations = Location.near(60606.to_s, 500).to_a
 
 CSV.readlines("db/health_insurance_companies.csv").each do |line|
-  Insurance.create!(name: line[0])
-end
 
-
-Insurance.create!(name: "Out of Network")
-
-ages = ["Adolescents / Teenagers (14 to 19)", "Adults", "Elders (65+)", "Children (6 to 10)", "Preteens / Tweens (11 to 13)", "Toddlers / Preschoolers (0 to 6)"]
-
-ages.each do |age|
-  AgeGroup.create!(generation: age)
 end
 
 def check_price_range(string)
@@ -219,3 +128,4 @@ CSV.readlines(@filename, headers: true, header_converters: :symbol).each do |lin
   end
 
 end
+=end
