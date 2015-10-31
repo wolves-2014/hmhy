@@ -1,4 +1,4 @@
-addiction:
+Addiction:
   primary:
     - "afraid"
     - "ashamed"
@@ -13,7 +13,7 @@ addiction:
   tertiary:
     - "like I'm a slave to something"
     - "lost someone important"
-adhd:
+ADHD:
   primary:
     - "unfocused"
   secondary:
@@ -24,7 +24,7 @@ adhd:
     - "forgetful"
     - "often losing things"
     - "tense"
-anxiety:
+Anxiety:
   primary:
     - "afraid"
     - "stuck"
@@ -37,7 +37,7 @@ anxiety:
     - "edgy"
     - "irritable"
     - "numb"
-eating_disorders:
+Eating Disorders:
   primary:
     - "ashamed"
     - "inadequate"
@@ -53,7 +53,7 @@ eating_disorders:
     - "losing control when eating"
     - "making careless mistakes"
     - "thinking about weight too much"
-depression:
+Depression:
   primary:
     - "afraid"
     - "ashamed"
@@ -71,7 +71,7 @@ depression:
     - "indecisive"
     - "numb"
     - "often think about death"
-grief:
+Grief:
   primary:
     - "afraid"
     - "tired"
