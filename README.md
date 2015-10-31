@@ -68,7 +68,7 @@ Contributors
 Ryan Milstead: [@ryanmilstead1](https://github.com/RyanMilstead1)
 
 
-Richard Baptist: [@rpabtist](https://github.com/rpbaptist)
+Richard Baptist: [@rpaptist](https://github.com/rpbaptist)
 
 
 Jordan Schreuder: [@mjsteichen](https://github.com/mjsteichen)
